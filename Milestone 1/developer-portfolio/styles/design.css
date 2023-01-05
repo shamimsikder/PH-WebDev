@@ -15,7 +15,7 @@
 nav{
     display: flex;
     justify-content: space-between;
-    margin: 50px 200px;
+    margin: 80px 200px;
 }
 
 nav ul{
@@ -239,4 +239,46 @@ main{
 .resume-button{
     margin-top: 50px;
     text-align: center;
+    margin-bottom: 113px;
+}
+
+/*Contact Section*/
+
+.contact{
+    display: flex;
+    gap: 100px;
+    background: #FFF8F3;
+    padding: 130px 150px;
+}
+
+.contact-title{  
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 48px;
+    text-align: left;    
+    color: #181818;
+    margin-bottom: 20px;
+}
+
+.contact-description{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #474747;  
+    margin-bottom: 30px;  
+}
+
+.contact a{
+    text-decoration: none;
+}
+
+.contact input,textarea{
+    margin-bottom: 20px;
+    border: none;
+    padding: 18px 30px;
+    width: 100%;
+}
+
+input{
+    height: 50px;
 }
