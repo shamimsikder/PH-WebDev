@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/*Header Section*/
+
+.background{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../images/donation0.jpg');
+    background-repeat: no-repeat;
+    padding: 210px;
+    background-position: center;
+    background-size: cover;  
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-title{
+    margin-top: 150px;
+    color: white;
+
+}
+
+.header-description{
+    margin-top: 20px;
+    color: white;
+}
+
+.btn-primary{
+    margin-top: 15px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #f02d2d;
+    color: white;
+    font-weight: 30px;
+    font-size: 18px;
+    padding: 14px 16px;
+}
+
+/*Donate Today*/
+
+.amount-container{
+    text-align: center;
+    padding: 120px 190px;
+}
+
+.amount-container h2{
+    margin-bottom: 20px;
+    font-size: 45px;
+}
+
+.amount-container p{
+    line-height: 5px;
+    margin-bottom: 30px;
+}
+
+.amount-items-container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.amount-items p{
+    background-color: #dedede;
+    border-radius: 5px;
+    padding: 45px 45px;
+    text-align: center;
+    font-weight: 70px;
+    font-size: 30px;
+    
+}
+
+.amount-items p:hover{
+    border: 2px solid #f02d2d;
+    border-radius: 5px;
+    
+    cursor: pointer;
+    color: #f02d2d;
+    background-color: rgba(246, 131, 131, 0.31);
+}
+
+.other{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.other-amount{
+    border: 0;
+    border-bottom: 1px solid black;
+    text-align: center;
+    width: 20%;
+    padding: 25px 20px;
+    margin-bottom: 20px;
+}
+
+.btn-secondary{
+    border: 0;
+    border-radius: 5px;
+    background-color: #f02d2d;
+    color: white;
+    font-weight: 30px;
+    font-size: 18px;
+    padding: 14px 16px;
+    margin-bottom: 70px;
+}
+
+/*Donate Plan*/
+
+.plan-title{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 45px;
+}
+
+.plan-description{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.plan-container{
+    display: flex;
+    justify-content: center;
+    padding: 35px 130px;
+}
+
+.plan-items{
+    padding: 90px 30px;
+    margin-left: 30px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+#one{
+    background-color: #e5f5fa;
+}
+
+#two{
+    background-color: #e7d0d0;
+}
+
+#three{
+    background-color: #f9dcdc;
+}
+
+.plan-items-title{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 25px
+}
+
+.plan-items-description{
+    font-size: 15px;
+    font-weight: 15px;
+}
+
+/*Their Lives*/
+
+.lives{
+    display: flex;
+    justify-content: center;
+    padding: 90px 190px;
+}
+
+.lives-items{
+   padding: 40px 80px;
+}
+
+.lives-title{
+    font-weight: 25px;
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+
+.lives-description{
+    font-weight: 15px;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.lives-items img{
+    border-radius: 5px;
+    width: 600px;
+}
+
+/*Survive Section*/
+
+.survive{
+    display: flex;
+    justify-content: center;
+    padding: 90px 190px;
+}
+
+.survive-items{
+    padding: 40px 80px;
+ }
+ 
+.survive-title{
+     font-weight: 25px;
+     font-size: 45px;
+     margin-bottom: 25px;
+ }
+ 
+.survive-description{
+     font-weight: 15px;
+     font-size: 15px;
+     margin-bottom: 25px;
+ }
+ 
+.survive-items img{
+     border-radius: 5px;
+     width: 600px;
+}
+ 
+/*My Updates Section*/
+
+/*My Updates Container 2 */
+
+.my-updates{
+    text-align: center;
+    padding: 70px 190px;
+}
+
+.my-updates-cont1{
+    padding: 20px 330px;
+}
+
+.my-updates-title{
+    margin-bottom: 20px;
+    font-weight: 25px;
+    font-size: 45px;
+}
+
+.my-updates-description{
+    font-weight: 15px;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+/*My Updates Container 1 */
+
+.my-updates-cont2{
+    background-color: rgba(247, 241, 192, 1);
+    padding: 90px 330px;
+    margin-left: 210px;
+    margin-right: 210px;
+    border-radius: 8px;
+}
+.my-updates-mail{
+    padding: 16px 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #c0c9c2;
+}
+
+.my-updates-btn{
+    padding: 16px 18px;
+    border: none;
+    border-radius: 5px;
+    background-color:  #f02d2d;
+    color: white;
+}
+
+/* Footer Section*/
+
+.footer{
+    text-align: center;
+    background-color: black;
+    color: #e5f5fa;
+    padding: 30px ;
+}
+
+.footer h1{
+    margin-bottom: 15px;
+}
