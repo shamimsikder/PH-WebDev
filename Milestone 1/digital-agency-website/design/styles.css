@@ -172,3 +172,35 @@
 .services-down{
     display: flex;
 }
+
+/*Appointment Styles*/
+
+.appointment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+    margin-top: -60px;
+    padding: 10px;
+    border-radius: 25px;
+    color: whitesmoke;
+    background-color: orangered;
+}
+
+.phone-call{
+    display: flex;
+}
+
+.call{
+    width: 90px;
+}
+
+.call-details{
+    margin-left: 15px;
+}
+
+.appointment-details{
+    width: 75%;
+}
+
