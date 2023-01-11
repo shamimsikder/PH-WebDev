@@ -67,3 +67,31 @@ body{
     object-fit: cover;
     object-position: left;
 }
+
+/*Responsive*/
+
+@media screen and (max-width: 576px) {
+    .container, .text-container, .img-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 976px) {
+    .container, .text-container, .img-container{
+        display: flex;
+        height: 90vh;
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .stat{
+        margin-top: 20px;
+    }
+}
