@@ -12,6 +12,8 @@ body{
 
 main{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
@@ -141,6 +143,7 @@ hr{
     align-items: flex-start;
 }
 
+
 .blog-img img{
     width: 177px;
     height: 117px;
@@ -167,4 +170,82 @@ hr{
 .blog-author a{
     color: #562EFF;
     text-decoration: none;
+}
+
+/*Course Section Styles*/
+
+.course-container{
+    background: #FFFFFF;
+    border-radius: 5px;
+    width: 870px;
+    padding: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.course-section-title{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #562EFF;
+    margin-bottom: 24px;
+}
+
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 24px;
+}
+
+.course-img img{
+    width: 224px;
+    height: 104px;
+}
+
+.course-details{
+    margin-top: 25px;
+}
+
+.course-title{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #1E1E1E;
+    margin-bottom: 8px;
+}
+
+.course-author{
+    font-weight: 400;
+    font-size: 14.6913px;
+    line-height: 17px;
+    color: #ED6B4F;
+    margin-bottom: 20px;
+}
+
+.course-info{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.course-info img{
+    height: 11px;
+    width: 12px;
+}
+
+.ratting{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #A2A2A2;
+}
+
+.course-duration{
+    font-weight: 600;
+    font-size: 14.6913px;
+    line-height: 20px;
+    color: #FF4A60;   
+    border-radius: 25px;
+    background-color: rgba(255, 77, 98, 0.233); 
+    padding: 5px;
 }
