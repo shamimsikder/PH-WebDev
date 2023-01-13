@@ -249,3 +249,39 @@ hr{
     background-color: rgba(255, 77, 98, 0.233); 
     padding: 5px;
 }
+
+/*Media Queries*/
+
+/*Mobile Device*/
+
+@media only screen and (max-width: 688px) {
+    .container, .course-container, .nav-bar{
+      width: 100%;
+    }
+    .players,
+    .blogs,
+    .courses {
+      grid-template-columns: repeat(1, 1fr);
+      
+    }
+    .player,
+    .blog,
+    .nav-bar {
+      flex-direction: column;
+    }
+  }
+  
+  /* Tablet Devices */
+  @media only screen and (min-width: 689px) and (max-width: 992px) {
+    .container, .course-container, .nav-bar {
+      width: 100%;
+    }
+    .players,
+    .courses {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .blogs {
+      grid-template-columns: repeat(1, 1fr);
+      
+    }
+  }
