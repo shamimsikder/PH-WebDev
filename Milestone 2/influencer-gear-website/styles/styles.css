@@ -243,10 +243,6 @@ main{
     gap: 100px;
 }
 
-.featured-product-img{
-
-}
-
 .featured-product-details{
     width: 510px;
     height: 224px;
@@ -273,6 +269,38 @@ main{
     border: none;
     padding: 10px 24px;
     color: white;
+}
+
+/*Footer Styles*/
+
+.footer{
+    background: #0A0826;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.footer-container{
+    padding: 50px 590px;
+}
+
+.footer-title{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    font-feature-settings: 'liga' off;
+    color: #FFFFFF;    
+}
+
+.footer-desc{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    font-feature-settings: 'liga' off;
+    color: #FFFFFF;
+}
+
+.footer-details i{
+    color: #FFFFFF;
 }
 
 /*Responsive Design*/
