@@ -1,0 +1,28 @@
+/*Common Styles*/
+
+:root{
+    --primary-color: #000000;
+    --secondary-color: #FFAD5A;
+    --button-bg-color: #FF5959;
+    --button-color: #FFFFFF;
+    --font:'Poppins', sans-serif;
+
+    --bg-color-1: rgba(79, 157, 166, 0.1);;
+    --bg-color-2: rgba(255, 89, 89, 0.1);;
+    --bg-color-3: #FFF4D6;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font);
+}
