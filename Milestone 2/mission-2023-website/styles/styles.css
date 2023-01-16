@@ -257,6 +257,41 @@ Lists Container Color
     margin-bottom: 15px;
 }
 
+/*Footer Styles*/
+
+footer{
+    background-color: var(--tertiary-color);
+    max-width: 2400px;
+    height: 15vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-title{
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0.5px;
+    color: var(--bg-color-3);
+}
+
+.footer-desc{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--bg-color-3);
+}
+
+/*Media Queries*/
+
+/*--------------
+  Mobile Device
+  --------------
+*/
+
 @media screen and (max-width:576px){
     header{
         flex-direction: column-reverse;
@@ -286,4 +321,9 @@ Lists Container Color
         gap: 10px;
         text-align: center;
     }
+
+    footer{
+        padding: 25px;
+    }
+   
 }
