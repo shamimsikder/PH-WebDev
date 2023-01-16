@@ -75,6 +75,72 @@ header{
     max-width: 250px;
 }
 
+/*My Mission Styles*/
+
+.mission-title{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 70px;
+    text-align: center;
+    color: var(--tertiary-color);
+    margin-bottom: 50px;
+}
+
+.mission-lists{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1200px;
+    width: 100%;
+    margin-bottom: 85px;
+}
+
+.mission-list{
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    height: 300px;
+    width: 100%;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+
+/*--------------------
+Lists Container Color
+----------------------*/
+
+#container1{
+    background-color: var(--bg-color-1);
+}
+#container2{
+    background-color: var(--bg-color-2);
+}
+#container3{
+    background-color: var(--bg-color-3);
+}
+
+.mission-list > img{
+    max-width: 100px;
+}
+
+
+.mission-list-title{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.mission-list-desc{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #424242;
+}
+
+
+
 @media screen and (max-width:576px){
     header{
         flex-direction: column-reverse;
@@ -83,5 +149,11 @@ header{
 
     .banner-details{
         text-align: center;
+    }
+
+    .mission-lists{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
