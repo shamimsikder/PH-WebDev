@@ -147,6 +147,7 @@ Lists Container Color
     display: flex;
     align-items: center;
     gap: 70px;
+    margin-bottom: 100px;
 }
 
 .develop-img > img{
@@ -155,7 +156,7 @@ Lists Container Color
 }
 
 .develop-details{
-    max-width: 654px;
+    max-width: 650px;
     width: 100%;
 }
 
@@ -168,6 +169,87 @@ Lists Container Color
 }
 
 .develop-description{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #3E3E3E;
+    margin-bottom: 15px;
+}
+
+/*Global Community Styles*/
+
+.global-container{
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    margin-bottom: 100px;
+}
+
+.global-details{
+    max-width: 650px;
+    width: 100%;
+}
+
+.global-title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    color: #333333;
+    margin-bottom: 15px; 
+}
+
+.global-description{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #3E3E3E;
+    margin-bottom: 15px;
+}
+
+.global-img > img{
+    max-width: 400px;
+    width: 100%;
+}
+
+/*Application Section*/
+
+.application-main-title{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 74px;
+    margin-bottom: 10px;
+}
+
+.application-container{
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    margin-bottom: 100px;
+}
+
+.application-img > img{
+    max-width: 400px;
+    width: 100%;
+}
+
+.application-details{
+    max-width: 650px;
+    width: 100%;
+}
+
+.application-title{
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 54px;
+    color: var(--primary-color);
+    margin-bottom: 15px; 
+}
+
+.application-description{
     font-weight: 400;
     font-size: 18px;
     line-height: 30px;
@@ -191,8 +273,15 @@ Lists Container Color
         align-items: center;
     }
 
-    .develop-container{
+    .develop-container,.application-container{
         flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .global-container{
+        flex-direction: column-reverse;
         padding: 10px;
         gap: 10px;
         text-align: center;
