@@ -11,3 +11,7 @@
     background-image: url("../image/carousel/3.jpg");
     height: 100vh;
 }
+
+.client-image{
+    width: 160px;
+}
