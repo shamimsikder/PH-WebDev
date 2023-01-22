@@ -5,3 +5,30 @@
     border-radius: 10px;
     color: white;
 }
+
+.cont{
+    height:100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+.row{
+    flex: 2;
+}
+
+.one{
+    background:rgba(87, 118, 57, 0.1);
+    border-radius: 10px;
+    height: 355px;
+    width: 238px;
+}
+
+.two{
+    height: 135px;
+    width: 238px;
+    border-radius: 10px;
+    background: linear-gradient(270deg, #FF0000 0%, #FF8938 100%);
+    opacity: 0.1;
+    border-radius: 10px;
+    transform: rotate(-180deg);
+}
