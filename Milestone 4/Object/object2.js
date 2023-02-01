@@ -21,3 +21,4 @@ let shoppingCart = {
 }
 
 console.log(shoppingCart)
+
