@@ -90,9 +90,10 @@ main{
     justify-content: center;
     gap: 10px;
     width: 100%;
-    height: 250px;
     max-width: 1200px;
     margin: 0 auto;
+    margin-bottom: 130px;
+
 }
 
 .left-container{
@@ -105,13 +106,12 @@ main{
     
     width: 100%;
     max-width: 300px;
-    height: auto;
+    height: 250px;
 }
 
 .right-container{
     width: 100%;
     max-width: 1000px;
-    height: auto;
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(3,1fr);
@@ -148,6 +148,39 @@ main{
 
 .message-title{
     margin-left: 5px;
+}
+
+/*Footer Styles*/
+
+.footer{
+    background-color: var(--black);
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.footer-container{
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+}
+
+hr{
+    height: 1px;
+    color: gray;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+    margin: 0 auto;
 }
 
 /*Media Queries*/
@@ -196,5 +229,9 @@ main{
 
     .btn2{
         border: 1px solid gray;
+    }
+
+    .footer-link{
+        flex-direction: column;
     }
 }
