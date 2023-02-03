@@ -1,3 +1,5 @@
+// Built-in Function of String
+
 let str = "Party Rock Anthem";
 
 console.log(str.charAt(4));
