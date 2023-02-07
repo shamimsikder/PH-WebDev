@@ -1,7 +1,3 @@
-//From this evenOdd() function we will find if the string character is even or odd
-
-//In this evenOdd() function we have to use string as variable otherwise it will show error
-
 function evenOdd(string){
 
     if(typeof string !== 'string'){
