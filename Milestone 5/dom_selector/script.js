@@ -1,6 +1,6 @@
 // getElementsByTagName()
 
-/*const header = document.getElementsByTagName('h1');
+const header = document.getElementsByTagName('h1');
 
 console.log(header);
 
@@ -58,7 +58,7 @@ const tools_container = document.querySelector('.fruits-container');
 
 tools_container.style.backgroundColor = 'seagreen';
 tools_container.style.color = 'white';
-tools_container.style.padding = '20px';*/
+tools_container.style.padding = '20px';
 
 //DOM Properties Add & Remove 
 
@@ -96,3 +96,40 @@ const fruitsList = document.querySelector('#fruit-container ul');
 
 fruitsList.appendChild(new_li)
 
+const mainContainer = document.getElementById('main-container');
+
+const section = document.createElement('section');
+const ul = document.createElement('ul');
+const h1 = document.createElement('h1');
+
+mainContainer.appendChild(section);
+
+h1.innerText = 'Food List';
+section.appendChild(h1);
+
+section.appendChild(ul);
+
+const new_li1 = document.createElement('li');
+new_li1.innerText = 'Biryani';
+section.appendChild(new_li1);
+
+const new_li2 = document.createElement('li');
+new_li2.innerText = 'Borhani';
+section.appendChild(new_li2);
+
+const new_li3 = document.createElement('li');
+new_li3.innerText = 'Shahi Tukra';
+section.appendChild(new_li3);
+
+const sectionDress = document.createElement('section');
+
+sectionDress.innerHTML = `
+<h1>Dress List</h1>
+<ul>
+    <li>T-shirt</>
+    <li>Shirt</>
+    <li>Cap</li>
+</ul>
+`
+
+mainContainer.appendChild(sectionDress);
