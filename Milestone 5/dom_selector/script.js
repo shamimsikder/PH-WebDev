@@ -42,7 +42,7 @@ for(let i of fruits_list) console.log(i.innerText);
 
 const list2 = document.querySelector('li');
 
-console.log(list2);*/
+console.log(list2);
 
 //style
 
@@ -58,4 +58,25 @@ const tools_container = document.querySelector('.fruits-container');
 
 tools_container.style.backgroundColor = 'seagreen';
 tools_container.style.color = 'white';
-tools_container.style.padding = '20px';
+tools_container.style.padding = '20px';*/
+
+//DOM Properties Add & Remove 
+
+const sections = document.querySelectorAll('section');
+
+console.log(sections)
+
+for(let section of sections){
+
+    section.style.border = '';
+    section.style.marginBottom = '5px';
+    section.style.borderRadius = '15px';
+    section.style.padding = '20px';
+    section.style.backgroundColor = 'seagreen';
+
+}
+
+const fruitsContainer = document.getElementById('fruit-container');
+
+fruitsContainer.classList.add('yellow-bg');
+//fruitsContainer.classList.remove('yellow-bg');
