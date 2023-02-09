@@ -36,10 +36,26 @@ const fruits_list = document.querySelectorAll('.fruits-container li');
 
 console.log(fruits_list);
 
-for(let i of fruits_list) console.log(i.innerText);*/
+for(let i of fruits_list) console.log(i.innerText);
 
 //querySelector()
 
 const list2 = document.querySelector('li');
 
-console.log(list2);
+console.log(list2);*/
+
+//style
+
+const h1_color = document.querySelector('.dom1');
+
+h1_color.style.color = 'orange';
+
+const h2_text = document.getElementById('h2');
+
+h2_text.innerText = 'DOM Tools PlayGround';
+
+const tools_container = document.querySelector('.fruits-container');
+
+tools_container.style.backgroundColor = 'seagreen';
+tools_container.style.color = 'white';
+tools_container.style.padding = '20px';
