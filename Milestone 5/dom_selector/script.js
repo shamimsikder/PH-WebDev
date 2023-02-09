@@ -133,3 +133,15 @@ sectionDress.innerHTML = `
 `
 
 mainContainer.appendChild(sectionDress);
+
+const sections2 = document.querySelectorAll('section');
+
+for(let section of sections2){
+
+    section.style.border = '';
+    section.style.marginBottom = '5px';
+    section.style.borderRadius = '15px';
+    section.style.padding = '20px';
+    section.style.backgroundColor = 'seagreen';
+
+}
