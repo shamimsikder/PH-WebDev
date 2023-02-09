@@ -22,20 +22,24 @@ const items = document.getElementsByClassName('item');
 console.log(items);
 
 for(let item of items) console.log(item);
-for(let item of items) console.log(item.innerHTML);*/
+for(let item of items) console.log(item.innerHTML);
 
 //querySelectorAll()
 
-const list = document.querySelectorAll('li')
+const list = document.querySelectorAll('li');
 
-console.log(list)
+console.log(list);
 
-for(let i of list) console.log(i.innerText)
+for(let i of list) console.log(i.innerText);
 
-const fruits_list = document.querySelectorAll('.fruits-container li')
+const fruits_list = document.querySelectorAll('.fruits-container li');
 
-console.log(fruits_list)
+console.log(fruits_list);
 
-for(let i of fruits_list) console.log(i.innerText)
+for(let i of fruits_list) console.log(i.innerText);*/
 
+//querySelector()
 
+const list2 = document.querySelector('li');
+
+console.log(list2);
