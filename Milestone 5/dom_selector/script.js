@@ -79,4 +79,20 @@ for(let section of sections){
 const fruitsContainer = document.getElementById('fruit-container');
 
 fruitsContainer.classList.add('yellow-bg');
-//fruitsContainer.classList.remove('yellow-bg');
+//fruitsContainer.classList.remove('yellow-bg');*/
+
+// DOM Node & Create Elements
+
+console.log(fruitsContainer.childNodes);
+console.log(fruitsContainer.childNodes[1]);
+console.log(fruitsContainer.firstChild);
+console.log(fruitsContainer.childNodes[3].childNodes);
+
+const new_li = document.createElement('li');
+
+new_li.innerText = 'Peach'
+
+const fruitsList = document.querySelector('#fruit-container ul');
+
+fruitsList.appendChild(new_li)
+
