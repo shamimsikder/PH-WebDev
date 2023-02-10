@@ -1,4 +1,4 @@
-const eventHandler = document.getElementById('event-handler');
+/*const eventHandler = document.getElementById('event-handler');
 const handlerStatus = document.getElementById('handler-status');
 
 eventHandler.addEventListener('click', function handleOnClick(){
@@ -16,5 +16,20 @@ updateBtn.addEventListener('click', function textUpdate(){
 
     changeText.innerText = inputText;
     inputField.value = '';
+
+})*/
+
+const commentBtn = document.getElementById('comment-btn');
+
+commentBtn.addEventListener('click', function (){
+
+    const newComment = document.getElementById('new-comment');
+    const commentText = newComment.value;
+
+    const postComment = document.getElementById('comment-box');
+    const p = document.createElement('p')
+    p.innerText = commentText;
+    postComment.appendChild(p);
+    newComment.value = '';
 
 })
