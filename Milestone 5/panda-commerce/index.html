@@ -56,7 +56,7 @@
                 <h1 class="font-semibold text-5xl mb-5">Mi LED TV 4A PRO 32</h1>
                 <p class="mb-8">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
                 <p class="mb-5 font-semibold text-3xl text-rose-600">$1289</p>
-                <button class="mb-5 font-semibold text-white bg-rose-600 px-4 py-2 rounded-lg flex items-center justify-center gap-3 text-center">Buy Now <i class="fa-solid fa-arrow-right"></i></button>
+                <button id="click-handler" class="mb-5 font-semibold text-white bg-rose-600 px-4 py-2 rounded-lg flex items-center justify-center gap-3 text-center">Buy Now <i class="fa-solid fa-arrow-right"></i></button>
             </div>
             <div>
                 <img src="./images/banner-images/tv.png" alt="">
@@ -106,35 +106,35 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10 p-1">
 
-                    <div class="bg-white rounded-xl px-5 py-5">
-                        <img src="./images/shoes/shoe-1.png" alt="">
+                    <div class="bg-white rounded-xl px-5 py-5 card-handler">
+                        <img id="my-img" src="./images/shoes/shoe-1.png" alt="">
                         <h1 class="text-center font-semibold text-2xl mb-5">Reebok Dart Men’s Shoes</h1>
                         <p class="text-center mb-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. </p>
                         <p class="text-center font-semibold mb-4">$1289</p>
                         <div class="flex justify-center items-center gap-2 bg-black text-white w-1/2 mx-auto rounded-xl">
-                            <button class="px-4 py-3">Buy Now</button>
+                            <button class="px-4 py-3 buy-btn">Buy Now</button>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-xl px-5 py-5">
+                    <div class="bg-white rounded-xl px-5 py-5 card-handler">
                         <img src="./images/shoes/shoe-2.png" alt="">
                         <h1 class="text-center font-semibold text-2xl mb-5">Reebok Dart Men’s Shoes</h1>
                         <p class="text-center mb-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. </p>
                         <p class="text-center font-semibold mb-4">$1289</p>
                         <div class="flex justify-center items-center gap-2 bg-black text-white w-1/2 mx-auto rounded-xl">
-                            <button class="px-4 py-3">Buy Now</button>
+                            <button class="px-4 py-3 buy-btn">Buy Now</button>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-xl px-5 py-5">
+                    <div class="bg-white rounded-xl px-5 py-5 card-handler">
                         <img src="./images/shoes/shoe-3.png" alt="">
                         <h1 class="text-center font-semibold text-2xl mb-5">Reebok Dart Men’s Shoes</h1>
                         <p class="text-center mb-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. </p>
                         <p class="text-center font-semibold mb-4">$1289</p>
                         <div class="flex justify-center items-center gap-2 bg-black text-white w-1/2 mx-auto rounded-xl">
-                            <button class="px-4 py-3">Buy Now</button>
+                            <button class="px-4 py-3 buy-btn">Buy Now</button>
                             <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </div>
@@ -142,7 +142,7 @@
                 </div>
 
             </div>
-            <div class="w-full max-w-7xl mx-auto mb-8">
+            <div class="w-full max-w-7xl mx-auto mb-8" id="backpack">
 
                 <div class="flex justify-between items-center">
                     <h1 class="text-3xl font-semibold">Bags</h1>
@@ -194,7 +194,7 @@
 
     <!--Footer Section-->
 
-    <footer class="w-full max-w-7xl mx-auto bg-red-100 rounded-xl mb-20 mt-20">
+    <footer id="my-section" class="w-full max-w-7xl mx-auto bg-red-100 rounded-xl mb-20 mt-20">
 
         <div class="flex flex-col gap-5 justify-center items-center p-20">
 
@@ -202,8 +202,8 @@
             <p class="text-slate-500 text-center">Get updates on sales specials and more</p>
 
             <div class="flex border-transparent rounded-xl">
-                <input class="py-2 outline-none px-3 rounded-tl-md rounded-bl-md" type="email" placeholder="Enter Your E-mail">
-                <button class="bg-rose-500 text-white px-5 py-2 rounded-tr-md rounded-br-md">Send</button>
+                <input class="py-2 outline-none px-3 rounded-tl-md rounded-bl-md" id="active-text" type="email" placeholder="Enter Your E-mail">
+                <button class="bg-rose-500 text-white px-5 py-2 rounded-tr-md rounded-br-md" id="active-btn" disabled>Send</button>
             </div>
 
         </div>
