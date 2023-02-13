@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bank System</title>
+
+    <!--Tailwind CSS-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--Fontawesome-->
+    <script src="https://kit.fontawesome.com/10abd8c763.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1 class="text-5xl font-semibold text-center mt-20">Welcome to <span class="text-fuchsia-900 font-semibold">Baap Er Bank!!</span></h1>
+    </header>
+
+    <main>
+
+        <section class="grid grid-cols-2 md:grid-cols-3 w-full md:max-w-[60%] mx-auto text-center md:text-left gap-5 mt-10 p-2 md:p-0">
+
+            <div  class="text-white bg-red-500 shadow-lg p-8 rounded-md">
+                <h3 class="text-2xl">Deposit</h3>
+                <p class="text-lg mt-2">Tk.<span id="deposit-bal">00</span></p>
+            </div>    
+            <div class="text-white bg-emerald-500 shadow-lg p-8 rounded-md">
+                <h3 class="text-2xl">Withdraw</h3>
+                <p class="text-lg mt-2">Tk.<span id="withdraw-bal">00</span></p>
+            </div>    
+            <div class="text-white bg-sky-500 shadow-lg p-8 rounded-md col-span-2 md:col-span-1">
+                <h3 class="text-2xl">Total Balance</h3>
+                <p class="text-lg mt-2">Tk.<span id="total-bal">00</span></p>
+            </div>    
+
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 mx-auto w-full md:max-w-[60%] gap-5 mt-10 mb-10  p-2 md:p-0 text-center md:text-left">
+
+            <div  class="flex flex-col text-white bg-indigo-500 shadow-lg p-8 rounded-md">
+                <h3 class="text-2xl">Deposit</h3>
+                <input id="deposit-field" class="outline-none py-2 px-4 rounded-md mb-2 mt-2 text-black" type="text" placeholder="Enter Amount">
+                <button id="deposit-btn" class="text-md px-4 py-2 rounded-md  bg-blue-700 hover:text-indigo-500 hover:bg-amber-50 font-semibold mt-2 w-full md:w-[25%]">Deposit</button>
+            </div>    
+
+            <div class="flex flex-col text-white bg-teal-500 shadow-lg p-8 rounded-md">
+                <h3 class="text-2xl">Withdraw</h3>
+                <input id="withdraw-field" class="outline-none py-2 px-4 rounded-md mb-2 mt-2 text-black" type="text" placeholder="Enter Amount">
+                <button id="withdraw-btn" class="text-md px-4 py-2 rounded-md  bg-blue-700 hover:text-teal-500 hover:bg-amber-50 font-semibold mt-2 w-full md:w-[25%]">Withdraw</button>
+            </div>    
+
+        </section>
+
+    </main>
+
+    <!--JavaScript-->
+    <script src=""></script>
+    
+</body>
+
+</html>
