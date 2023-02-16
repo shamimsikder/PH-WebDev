@@ -56,3 +56,25 @@ document.getElementById('calculator').addEventListener('click', function(event){
         typedNumberField.value = newTypedNumber;
     }
 })
+
+document.getElementById('verify-pin').addEventListener('click', function(){
+
+    const displayPinField = document.getElementById('display-pin')
+    const currentPin = displayPinField.value
+
+    const typedNumberField =document.getElementById('typed-numbers')
+    const typedNumber = typedNumberField.value 
+
+    const pinSuccessMessage = document.getElementById('pin-success')
+    const pinFailedMessage = document.getElementById('pin-failure')
+
+    if(typedNumber === currentPin){
+        pinFailedMessage.style.display = 'none'
+        pinSuccessMessage.style.display = 'block'
+    }
+    else{
+        pinFailedMessage.style.display = 'block'
+        pinSuccessMessage.style.display = 'none'
+    }
+
+})
