@@ -6,8 +6,14 @@ function setBalance(income,food,rent,clothes){
     const totalExpenses = (food+rent+clothes);
     const balance = income - totalExpenses;
 
-    totalExpenseField.innerText = totalExpenses;
-    balanceField.innerText = balance;
+    if(totalExpenses > income){
+        alert('Reduce your expenses money')
+    }
+
+    else{
+        totalExpenseField.innerText = totalExpenses;
+        balanceField.innerText = balance;
+    }
 
 }
 
@@ -26,10 +32,13 @@ function setSaving(){
 
     const remainingBalance = balance - savingAmount
 
-    savingField.innerText = savingAmount
-    remainingField.innerText = remainingBalance
+    if(savingAmount > balance){
+        alert("Saving is greater than balance")
+    }
 
-    console.log(remainingBalance)
-    console.log(balance)
+    else{
+        savingField.innerText = savingAmount
+        remainingField.innerText = remainingBalance
+    }
 
 }
