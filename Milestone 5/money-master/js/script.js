@@ -8,3 +8,9 @@ document.getElementById('calculate').addEventListener('click', function(){
     setBalance(income, food, rent, clothes)
 
 })
+
+document.getElementById('save').addEventListener('click', function(){
+
+    setSaving()
+
+})
