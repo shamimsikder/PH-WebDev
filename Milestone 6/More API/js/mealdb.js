@@ -1,6 +1,8 @@
-const loadMeal = () => {
+const loadMeal = (searchText) => {
 
-    fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=Fish')
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchText}`
+
+    fetch(url)
         .then(res => res.json())
         .then(data => displayMeal(data.meals))
 
@@ -31,6 +33,14 @@ const displayMeal = meals => {
         mealsContainer.appendChild(mealDiv)
 
     })
+
+}
+
+const searchMeals = () => {
+
+    const searchText = document.getElementById('search-field').value
+
+    loadMeal(searchText)
 
 }
 
