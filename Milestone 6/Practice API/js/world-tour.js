@@ -25,7 +25,7 @@ const displayAllData = (countries) => {
                 <h2 class="card-title">${country.name.common}</h2>
                 <p>Population: ${country.population}</p>
                 <div class="card-actions">
-                <label onclick = "showDetails('${country.cca2}')" for="my-modal-6" class="btn btn-primary">Details</label>    
+                
             </div>
         </div>
 
@@ -38,14 +38,5 @@ const displayAllData = (countries) => {
 
 }
 
-const showDetails = (id) => {
-
-    const URL = `https://restcountries.com/v3.1/alpha/${id}`
-
-    fetch(URL)
-        .then(res => res.json)
-        .then(data => data)
-
-}
 
 loadAllData()
