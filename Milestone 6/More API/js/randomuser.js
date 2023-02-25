@@ -6,6 +6,25 @@ const loadData = () => {
 
 }
 
+const loadData2 = async() => {
+
+    try{
+
+        const res = await fetch('https://randomuser.me/api/?gender=female')
+        const data = await res.json()
+
+        displayData(data)
+
+    }
+
+    catch(error){
+
+        console.log(error)
+
+    }
+
+}
+
 const displayData = data => {
 
     const nameTag = document.getElementById('name')
@@ -16,4 +35,4 @@ const displayData = data => {
 
 }
 
-loadData()
+loadData2()

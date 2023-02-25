@@ -17,7 +17,7 @@ const loadQuote2 = async() => {
 
     }
 
-    catch{
+    catch(error){
         console.log(error)
     }
 
