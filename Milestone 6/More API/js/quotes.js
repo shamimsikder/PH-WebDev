@@ -6,6 +6,23 @@ const loadQuote = () =>{
 
 }
 
+const loadQuote2 = async() => {
+
+    try{
+
+        const res = await fetch('https://api.kanye.rest/')
+        const data = await res.json()
+
+        displayData(data)
+
+    }
+
+    catch{
+        console.log(error)
+    }
+
+}
+
 const displayData = quote => {
 
     const blockQuote = document.getElementById('quotes')
@@ -15,7 +32,7 @@ const displayData = quote => {
 
 document.getElementById('refresh').addEventListener('click', function(){
 
-    loadQuote()
+    loadQuote2()
 
 })
 
