@@ -5,6 +5,11 @@ const loadMeal = (searchText) => {
     fetch(url)
         .then(res => res.json())
         .then(data => displayMeal(data.meals))
+        .catch(error => {
+
+            console.log(error)
+
+        })
 
 }
 
@@ -27,7 +32,7 @@ const displayMeal = meals => {
             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
             </div>
 
-            <button onclick = "loadMealDetail(${meal.idMeal})" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mealDetails">
+            <button onclick = "loadMealDetail2(${meal.idMeal})" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mealDetails">
             Meal Details
             </button>
 
@@ -56,6 +61,25 @@ const loadMealDetail = idMeal => {
     fetch(url)
         .then(res => res.json())
         .then(data => displayMealDetails(data.meals[0]))
+
+}
+
+const loadMealDetail2 = async(idMeal) => {
+
+    const url =  `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${idMeal}`;
+
+    try{
+
+        const res = await fetch(url);
+        const data = await res.json();
+
+        displayMealDetails(data.meals[0])
+
+    }
+
+    catch(error){
+        console.log(error)
+    }
 
 }
 
