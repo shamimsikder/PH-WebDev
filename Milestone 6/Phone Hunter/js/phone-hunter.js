@@ -25,6 +25,15 @@ const showData = (phones) => {
 
     container.textContent = ''
 
+    const noPhone = document.getElementById('text-warning')
+
+    if(phones.length === 0){
+        noPhone.classList.remove('hidden')
+    }
+    else{
+        noPhone.classList.add('hidden')
+    }
+
     phones.slice(0, 10).forEach((phone) => {
         console.log(phone.image)
         const div = document.createElement('div')
@@ -60,7 +69,6 @@ document.getElementById('search-btn').addEventListener('click', function(){
     
 
 })
-
 
 
 //loadData()
