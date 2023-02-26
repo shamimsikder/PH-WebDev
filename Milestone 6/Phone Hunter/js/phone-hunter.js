@@ -1,8 +1,8 @@
-const loadData = async() => {
+const loadData = async(searchText) => {
 
     try{
 
-        const URL = "https://openapi.programming-hero.com/api/phones?search=iphone"
+        const URL = `https://openapi.programming-hero.com/api/phones?search=${searchText}`
 
         const res = await fetch(URL)
         const data = await res.json()
@@ -22,6 +22,8 @@ const loadData = async() => {
 const showData = (phones) => {
 
     const container = document.getElementById('data-container')
+
+    container.textContent = ''
 
     phones.slice(0, 10).forEach((phone) => {
         console.log(phone.image)
@@ -47,4 +49,18 @@ const showData = (phones) => {
 
 }
 
-loadData()
+
+
+document.getElementById('search-btn').addEventListener('click', function(){
+
+    const search = document.getElementById('search-field')
+    const searchText = search.value
+
+    loadData(searchText)
+    
+
+})
+
+
+
+//loadData()
