@@ -56,19 +56,37 @@ const showData = (phones) => {
 
     })
 
+    toggleSpinner(false)
+
 }
 
 
 
 document.getElementById('search-btn').addEventListener('click', function(){
 
+    toggleSpinner(true)
+
     const search = document.getElementById('search-field')
     const searchText = search.value
 
     loadData(searchText)
     
-
 })
 
+const toggleSpinner = idLoading => {
+
+    const loaderSection = document.getElementById('loader')
+
+    if(idLoading){
+
+        loaderSection.classList.remove('hidden')
+
+    }
+
+    else{
+        loaderSection.classList.add('hidden')
+    }
+
+}
 
 //loadData()
