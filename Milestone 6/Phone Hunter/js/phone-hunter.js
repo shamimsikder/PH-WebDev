@@ -1,3 +1,4 @@
+// Fetch Phone Data From API
 const loadData = async(searchText, dataLimit) => {
 
     try{
@@ -19,6 +20,7 @@ const loadData = async(searchText, dataLimit) => {
 
 }
 
+// Show Phone Data
 const showData = (phones, dataLimit) => {
 
     const container = document.getElementById('data-container')
@@ -63,11 +65,10 @@ const showData = (phones, dataLimit) => {
                 <img src="${phone.image}" alt="Shoes" class="rounded-xl" />
             </figure>
             <div class="card-body items-center text-center">
-                <h2 class="card-title">${phone.phone_name}</h2>
-                <div class="card-actions">
-                
+                <h2 class="card-title">${phone.phone_name}</h2>             
             </div>
         </div>
+
         `;
 
         container.appendChild(div)
@@ -129,5 +130,3 @@ const toggleSpinner = idLoading => {
     }
 
 }
-
-//loadData()
