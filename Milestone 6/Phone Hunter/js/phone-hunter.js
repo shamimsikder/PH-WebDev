@@ -28,6 +28,7 @@ const showData = (phones, dataLimit) => {
 
     const noPhone = document.getElementById('text-warning')
 
+    // Search Warning
     if(phones.length === 0){
         noPhone.classList.remove('hidden')
     }
@@ -35,6 +36,7 @@ const showData = (phones, dataLimit) => {
         noPhone.classList.add('hidden')
     }
 
+    //Show All Phone Data's Condition
     if(dataLimit && phones.length > 10){
 
         phones = phones.slice(0, 10)
@@ -76,6 +78,7 @@ const showData = (phones, dataLimit) => {
 
 }
 
+//Search Data
 const processSearch = (dataLimit) => {
 
     toggleSpinner(true)
@@ -87,18 +90,30 @@ const processSearch = (dataLimit) => {
 
 }
 
+// Show All Button
 document.getElementById('show-all-btn').addEventListener('click', function(){
 
     processSearch()
 
 })
 
+
+// Search Button
 document.getElementById('search-btn').addEventListener('click', function(){
 
     processSearch(10)
     
 })
 
+// Search on Enter Press
+document.getElementById('search-field').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        processSearch(10);
+    }
+})
+
+
+// Toggle Spinner
 const toggleSpinner = idLoading => {
 
     const loaderSection = document.getElementById('loader')
