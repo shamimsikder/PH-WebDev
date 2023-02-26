@@ -1,4 +1,4 @@
-const loadData = async(searchText) => {
+const loadData = async(searchText, dataLimit) => {
 
     try{
 
@@ -7,7 +7,7 @@ const loadData = async(searchText) => {
         const res = await fetch(URL)
         const data = await res.json()
 
-        showData(data.data)
+        showData(data.data, dataLimit)
 
     }
 
@@ -19,9 +19,10 @@ const loadData = async(searchText) => {
 
 }
 
-const showData = (phones) => {
+const showData = (phones, dataLimit) => {
 
     const container = document.getElementById('data-container')
+    const showAll = document.getElementById('show-all-btn')
 
     container.textContent = ''
 
@@ -34,7 +35,22 @@ const showData = (phones) => {
         noPhone.classList.add('hidden')
     }
 
-    phones.slice(0, 10).forEach((phone) => {
+    if(dataLimit && phones.length > 10){
+
+        phones = phones.slice(0, 10)
+        
+        showAll.classList.remove('hidden')
+
+    }
+
+    else{
+
+        showAll.classList.add('hidden')
+
+
+    }
+
+    phones.forEach((phone) => {
         console.log(phone.image)
         const div = document.createElement('div')
 
@@ -60,16 +76,26 @@ const showData = (phones) => {
 
 }
 
-
-
-document.getElementById('search-btn').addEventListener('click', function(){
+const processSearch = (dataLimit) => {
 
     toggleSpinner(true)
 
     const search = document.getElementById('search-field')
     const searchText = search.value
 
-    loadData(searchText)
+    loadData(searchText, dataLimit)
+
+}
+
+document.getElementById('show-all-btn').addEventListener('click', function(){
+
+    processSearch()
+
+})
+
+document.getElementById('search-btn').addEventListener('click', function(){
+
+    processSearch(10)
     
 })
 
