@@ -1,4 +1,6 @@
-const fs = require('fs')
+// Convert to JSON & Save JSON File
+
+/*const fs = require('fs')
 
 const cars = [
     
@@ -46,4 +48,39 @@ fs.writeFile('cars.json', json, (err) => {
         console.log('File saved!');
     }
 
-})
+})*/
+
+const loadData = async() => {
+
+    const res = await fetch('cars.json')
+    const data = await res.json()
+
+    showAllData(data)
+
+}
+
+const showAllData = (cars) => {
+
+    const container = document.getElementById('container')
+
+    cars.forEach((car) => {
+
+        const div = document.createElement('div')
+        div.classList.add("w-96", "h-96", "p-5", "bg-slate-100", "mb-10")
+
+        div.innerHTML = `
+        
+        <img  src="${car.imageURL}" alt="">
+        <h1 class="mt-5">Car Name: ${car.name}</h1>
+        <p class="mt-3">Car Details: ${car.description}</p>
+        <button class="mt-3 px-3 py-1 bg-blue-500 rounded-md text-white">Car Price: ${car.price}</button>
+        
+        `;
+
+        container.appendChild(div)
+
+    })
+
+}
+
+loadData()
