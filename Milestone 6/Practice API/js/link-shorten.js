@@ -2,11 +2,16 @@ function getLink(){
 
     const link = document.getElementById('input-field')
     
-    const linkValue = link.value
+    if(link.value === ''){
+        alert("Please Insert A Link")
+    }
+    else{
+        const linkValue = link.value
 
     link.value = ''
 
     return linkValue
+    }
 
 }
 
