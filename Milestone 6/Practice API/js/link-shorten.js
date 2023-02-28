@@ -4,6 +4,8 @@ function getLink(){
     
     const linkValue = link.value
 
+    link.value = ''
+
     return linkValue
 
 }
@@ -35,10 +37,42 @@ const showData = (link) => {
 
     const li = document.createElement('li')
 
-    li.innerHTML = `${link}`
+    li.classList.add("flex", "justify-between", "item-center", "mt-2")
 
-    lists.appendChild(li)
+    li.innerHTML = `
+    
+        <p class="link-text">${link}</p>
 
+        <button class="copy-button px-3 py-1 bg-sky-500 text-white rounded-sm">Copy!</button>
+    
+    `
+
+    const copyButton = li.querySelector(".copy-button");
+    const linkText = li.querySelector(".link-text");
+
+    copyButton.addEventListener("click", () => {
+      copy(linkText);
+    });
+
+    lists.appendChild(li);
+
+    function copy(copyText) {
+      const text = copyText.innerText;
+      
+      navigator.clipboard.writeText(text);
+      
+      console.log("Copied to clipboard: " + text);
+    }
 }
+
+
+document.getElementById('hide-list').addEventListener('click', function(){
+
+    const lists = document.getElementById('lists')
+    lists.classList.remove('hidden')
+
+})
+
+  
 
 loadData()

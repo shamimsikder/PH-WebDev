@@ -10,6 +10,8 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <script src="https://kit.fontawesome.com/10abd8c763.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body class="flex flex-col items-center justify-center w-full max-w-6xl mx-auto h-screen bg-slate-200">
@@ -23,9 +25,12 @@
 
         <div id="link-list" class="bg-gray-900 text-white p-5 rounded-md">
 
-            <h1 class="text-center text-lg underline underline-offset-8">Shorten Link</h1>
+            <button id="hide-list" class="px-3 py-2 bg-sky-500 text-white rounded-sm text-center">
+                Shorten Link
+                <i class="fa-regular fa-eye"></i>
+            </button>
             
-            <ol id="lists" class="list-decimal px-3 mt-3">
+            <ol id="lists" class="list-decimal px-3 mt-3 hidden">
 
             </ol>
 
