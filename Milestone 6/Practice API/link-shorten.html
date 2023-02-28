@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Short Link</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="flex flex-col items-center justify-center w-full max-w-6xl mx-auto h-screen bg-slate-200">
+
+    <section class=" grid grid-cols-2 gap-10">
+
+        <div class="bg-gray-900 p-5 rounded-md">
+            <input id="input-field" class="px-3 py-2 bg-slate-100 text-gray-900 outline-none rounded-sm" type="text" placeholder="Shorten a link here....">
+            <button id="submit" class="px-3 py-2 bg-sky-500 text-white rounded-sm">Shorten It!</button>
+        </div>
+
+        <div id="link-list" class="bg-gray-900 text-white p-5 rounded-md">
+
+            <h1 class="text-center text-lg underline underline-offset-8">Shorten Link</h1>
+            
+            <ol id="lists" class="list-decimal">
+
+            </ol>
+
+        </div>
+
+    </section>
+
+
+    <script src="./js/link-shorten.js"></script>
+
+</body>
+
+</html>
