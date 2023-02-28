@@ -23,6 +23,24 @@
 
     </section>
 
+    <section id="filter-container" class="flex justify-center items-center mt-10">
+
+        <select class="px-3 py-2 outline-none border-2" name="" id="region">
+            <option value="America">Africa</option>
+            <option value="America">America</option>
+            <option value="America">Asia</option>
+            <option value="America">Europe</option>
+            <option value="America">Oceania</option>
+        </select>
+
+        <select class="px-3 py-2 outline-none border-2" name="" id="capital-select">
+
+
+        </select>
+
+
+    </section>
+
     <section id="countries-info" class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-20 mb-20">
 
         <div class="card w-96 bg-base-100 shadow-xl">
@@ -32,7 +50,7 @@
     </section>
 
     <div class="text-end lg:px-12">
-        <button onclick="showAllDataTogether()" class="btn btn-primary my-4">See ALL</button>
+        <button id="see-all" onclick="showAllDataTogether()" class="btn btn-primary my-4">See ALL</button>
     </div>
     
     <div id="modal-info">

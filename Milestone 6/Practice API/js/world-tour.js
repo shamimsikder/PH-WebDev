@@ -1,7 +1,7 @@
 const loadMyData = async () => {
     const res = await fetch("https://restcountries.com/v3.1/all");
     const data = await res.json();
-    console.log(data);
+    
     showAllData(data.slice(0, 5));
 };
   
@@ -77,3 +77,59 @@ const showSingleCountryDataModal = (value) => {
     container.appendChild(div);
 
 }
+
+const fetchCapitalTitle = async() =>{
+
+    const URL = "https://restcountries.com/v3.1/all"
+
+    const res = await fetch(URL)
+    const data = await res.json()
+
+    addCapitalData(data)
+
+}
+
+const addCapitalData = (capitals) => {
+
+    const capitalSelect = document.getElementById('capital-select')
+   
+    capitals.forEach((capital) => {
+
+        const option = document.createElement("option")
+
+        option.value = `${capital?.capital?.[0] ?? "undefined"}`
+        option.textContent = `${capital?.capital?.[0] ?? "undefined"}`
+        capitalSelect.appendChild(option)
+
+    })
+
+}
+
+document.getElementById('capital-select').addEventListener('change', function(){
+
+    const capital = document.getElementById('capital-select')
+    const seeAll = document.getElementById('see-all')
+
+    fetch(`https://restcountries.com/v3.1/capital/${capital.value}`)
+      .then((res) => res.json())
+      .then((data) => showAllData(data))
+
+    seeAll.classList.add('hidden')
+
+})
+
+document.getElementById('region').addEventListener('change', function(){
+
+    const capital = document.getElementById('region')
+    const seeAll = document.getElementById('see-all')
+
+    fetch(`https://restcountries.com/v3.1/region/${capital.value}`)
+      .then((res) => res.json())
+      .then((data) => showAllData(data))
+
+    seeAll.classList.add('hidden')
+
+})
+
+
+fetchCapitalTitle()
