@@ -1,6 +1,6 @@
 // Load Data
 
-const loadData = () => {
+const loadCategoriesData = () => {
 
     fetch("https://openapi.programming-hero.com/api/news/categories")
         .then((res) => res.json())
@@ -30,6 +30,16 @@ const showCategories = data => {
         categoriesContainer.appendChild(linkContainer);
 
     });
+
+}
+
+const fetchCategoryNews = (category_id, category_name) => {
+
+    const url = `https://openapi.programming-hero.com/api/news/category/${category_id}`
+
+    fetch(url)
+        .then(res => res.json())
+        .then(data => showAllNews(data.data, category_name))
 
 }
 
