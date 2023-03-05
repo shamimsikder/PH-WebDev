@@ -176,4 +176,13 @@ const showNewsDetails = (newsDetails) => {
 
 }
 
+const showTrending=()=>{
+ 
+    const trendingNews = fetchData.filter(singleData => singleData.others_info.is_trending === true);
+    const category_name = document.getElementById("category-name").innerText;
+ 
+    showAllNews(trendingNews, category_name);
+
+}
+
 loadCategoriesData()
