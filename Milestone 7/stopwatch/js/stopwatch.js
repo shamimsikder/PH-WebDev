@@ -1,26 +1,23 @@
-const start = document.getElementById('start')
-const stop = document.getElementById('stop')
-const reset = document.getElementById('reset')
-const seconds = document.getElementById('seconds')
-const tens = document.getElementById('tens')
-let s = 00
-let t = 00
-let interval
+const seconds = document.getElementById('seconds');
+const tens = document.getElementById('tens');
+let s = 00;
+let t = 00;
+let interval;
 
-start.addEventListener('click', function(){
+document.getElementById('start').addEventListener('click', function(){
 
-    clearInterval(interval)
-    interval = setInterval(startTimer, 10)
+    clearInterval(interval);
+    interval = setInterval(startTimer, 10);
 
 })
 
-stop.addEventListener('click', function(){
+document.getElementById('stop').addEventListener('click', function(){
 
     clearInterval(interval);
 
 })
 
-reset.addEventListener('click', function(){
+document.getElementById('reset').addEventListener('click', function(){
 
     clearInterval(interval);
     
