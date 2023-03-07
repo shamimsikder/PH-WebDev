@@ -45,9 +45,9 @@ let count = 0;
 const addToCart = (id, price) => {
    count = count + 1;
    updatePrice('price', price);
-
    updateTaxAndCharge();
    document.getElementById('total-Products').innerText = count;
+   updateTotal()
 };
 
 const showProductDetails = (product_id) => {
@@ -107,7 +107,7 @@ const updateTotal = () => {
       getInputValue('price') +
       getInputValue('delivery-charge') +
       getInputValue('total-tax');
-   document.getElementById('total').innerText = grandTotal;
+   document.getElementById('total').innerText = parseFloat(grandTotal);
 };
 
 // search by category
