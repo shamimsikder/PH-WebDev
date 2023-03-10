@@ -16,9 +16,19 @@
 
 <body class="w-full max-w-6xl mx-auto">
     
-    <button id="get" class="px-4 py-2 rounded-md bg-teal-500">Set Item</button>
-    <button id="set" class="px-4 py-2 rounded-md bg-teal-500">Get Item</button>
-    <button id="remove" class="px-4 py-2 rounded-md bg-teal-500">Remove Item</button>
+    <input type="text" class="px-4 py-2 rounded-md outline-none border-2 border-teal-500" placeholder="Product">
+    <input type="text" class="px-4 py-2 rounded-md outline-none border-2 border-teal-500" placeholder="Quantity">
+    <button id="remove" class="px-4 py-2 rounded-md bg-teal-500">Add Item</button>
+
+    <div id="display">
+
+        <ol id="list" class="list-decimal">
+
+
+
+        </ol>
+
+    </div>
 
     <!--JS-->
     <script src="localStorage.js"></script>
