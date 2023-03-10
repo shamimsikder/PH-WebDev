@@ -16,13 +16,13 @@
 
 <body class="w-full max-w-6xl mx-auto">
     
-    <input type="text" class="px-4 py-2 rounded-md outline-none border-2 border-teal-500" placeholder="Product">
-    <input type="text" class="px-4 py-2 rounded-md outline-none border-2 border-teal-500" placeholder="Quantity">
-    <button id="remove" class="px-4 py-2 rounded-md bg-teal-500">Add Item</button>
+    <input id="product" type="text" class="px-4 py-2 rounded-md outline-none border-2 border-teal-500" placeholder="Product">
+    <input id="quantity" type="text" class="px-4 py-2 rounded-md outline-none border-2 border-teal-500" placeholder="Quantity">
+    <button id="add" class="px-4 py-2 rounded-md bg-teal-500" onclick="addProduct()">Add Item</button>
 
     <div id="display">
 
-        <ol id="list" class="list-decimal">
+        <ol id="list" class="list-decimal list-inside mt-10">
 
 
 
