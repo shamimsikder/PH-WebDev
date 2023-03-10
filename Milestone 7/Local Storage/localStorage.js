@@ -49,3 +49,19 @@ const saveItemLocalStorage = (product, quantity) => {
     localStorage.setItem('item',itemStringified)
 
 }
+
+const showProductFromLocalStorage = () => {
+
+    const savedItem = getStoredItem()
+
+    for(const product in savedItem){
+
+        const quantity = savedItem[product]
+
+        showProduct(product, quantity)
+
+    }
+
+}
+
+showProductFromLocalStorage()
