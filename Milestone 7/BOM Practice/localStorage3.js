@@ -41,3 +41,15 @@ document.getElementById('delete-message').addEventListener('click', function(){
     localStorage.removeItem("Message")
 
 })
+
+document.getElementById('reset').addEventListener('click', function(){
+
+    const keys = ["Name","Email","Message"]
+
+    keys.forEach(key => {
+
+        localStorage.removeItem(key)
+
+    })
+
+})
