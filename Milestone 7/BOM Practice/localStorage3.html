@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Practice</title>
+
+    <!--Tailwind CSS CDN-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="w-full flex justify-center items-center h-screen max-w-5xl mx-auto">
+
+    <section class="bg-violet-500 p-10 rounded-sm">
+
+        <div class="flex flex-col gap-5">
+
+            <div>
+                <input id="input-name" class="px-3 py-1 outline-none rounded-sm" type="text" placeholder=" Send Name">
+                <button class="px-3 py-1 outline-none bg-neutral-100 text-violet-700 rounded-sm">Send Name</button>
+                <button class="px-3 py-1 outline-none bg-neutral-100 text-violet-700 rounded-sm">Delete Name</button>
+            </div>
+
+            <div>
+                <input id="input-email" class="px-3 py-1 outline-none rounded-sm" type="text" placeholder=" Send Email">
+                <button class="px-3 py-1 outline-none bg-neutral-100 text-violet-700 rounded-sm">Send Email</button>
+                <button class="px-3 py-1 outline-none bg-neutral-100 text-violet-700 rounded-sm">Delete Email</button>
+            </div>
+
+            <div class="flex justify-center items-center gap-1">
+                <textarea id="input-message" class="px-3 py-1 outline-none rounded-sm" placeholder="Send Message" name="" cols="23" rows="1"></textarea>
+                <button  class="px-3 py-1 outline-none bg-neutral-100 text-violet-700 rounded-sm">Send Message</button>
+                <button class="px-3 py-1 outline-none bg-neutral-100 text-violet-700 rounded-sm">Delete Message</button>
+            </div>
+
+        </div>
+
+    </section>
+    
+    <script src="localStorage3.js"></script>
+
+</body>
+
+</html>
