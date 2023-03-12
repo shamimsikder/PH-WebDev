@@ -42,6 +42,27 @@ document.getElementById('delete-message').addEventListener('click', function(){
 
 })
 
+// Send Functionality
+
+document.getElementById('send').addEventListener('click', function(){
+
+    const name = document.getElementById('input-name').value
+    const email = document.getElementById('input-email').value
+    const message = document.getElementById('input-message').value
+
+    const value = [name, email, message]
+    const keys = ["Name","Email","Message"]
+
+    keys.forEach((key, index)=> {
+
+        localStorage.setItem(key, value[index])
+
+    })
+
+})
+
+// Reset Functionality
+
 document.getElementById('reset').addEventListener('click', function(){
 
     const keys = ["Name","Email","Message"]
