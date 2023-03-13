@@ -26,6 +26,7 @@ for(const button of buttons){
 function getInputValue(inputId){
     const inputField = document.getElementById(inputId);
     const inputFieldValue = inputField.value;
+    inputField.value = ''
     return inputFieldValue
 };
 
