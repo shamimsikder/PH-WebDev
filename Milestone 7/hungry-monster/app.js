@@ -49,15 +49,16 @@ const mealIngredientsInfo = mealItemName => {
     const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItemName}`;
 fetch(url)
         .then(response => response.json())
-        .then(data => displayDetails(data))
+        .then(data => displayDetails(data.meals))
 }
 
 //meal ingredients details information
 
 const displayDetails = mealItemDetails => {
     const mealItemsInformation = document.getElementById('mealItemsInfo');
+    console.log(mealItemDetails)
     mealItemDetails.forEach(items => {
-        const mealItemsInformations = document.innerHTML('div');
+        const mealItemsInformations = document.createElement('div');
         mealItemsInformations.className = 'ingredients-info';
         console.log(items.strMeal);
         const itemsName = document.createElement('h1');
@@ -83,6 +84,7 @@ const displayDetails = mealItemDetails => {
          <li>${items.strIngredient11}</li>
          <li>${items.strIngredient12}</li>
          <li>${items.strIngredient13}</li>
+        
         `
         ul.innerHTML = li;
         mealItemsInformations.appendChild(itemsName);
