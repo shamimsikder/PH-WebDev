@@ -1,7 +1,7 @@
 // select all dom
 const buttons = document.querySelectorAll('#card_btn .btn');
 const selectedPlayer = document.getElementById('selected');
-
+let countPlayer = 0;
 
 // Button click and selected player update
 function addPlayer(playerName){
@@ -15,6 +15,7 @@ for(const button of buttons){
         if(selectedPlayer.children.length <= 4){
             button.classList.add('disabled');
             addPlayer(button.parentNode.children[0].innerText);
+            countPlayer++;
         } else{
             button.classList.remove('disabled');
             alert('5 Played already Selected');
@@ -30,6 +31,11 @@ function getInputValue(inputId){
 
     if(isNaN(inputFieldValue) || inputFieldValue < 0 || inputFieldValue === ''){
         alert("Enter Valid Number")
+        return 0
+    }
+
+    if(countPlayer !== 5){
+        alert('Please, select 5 player')
         return 0
     }
 
