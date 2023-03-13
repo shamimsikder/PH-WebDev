@@ -70,17 +70,22 @@ const displayDetails = mealItemDetails => {
         imgUrl.src = items.strMealThumb;
         mealItemsInformations.appendChild(imgUrl);
         
-        let ingredient = [];
-        for (let i = 1; i <= 20; i++) {
-          if (items[`strIngredient${i}`]) {
-            ingredient.push(items[`strIngredient${i}`]);
-          }
+        let ingredient = []
+
+        for(let i = 1; i <= 20; i++){
+
+            if(items[`strIngredient${i}`]){
+
+                ingredient.push(items[`strIngredient${i}`])
+
+            }
+
         }
-        
+
         const li = `
-          <ul>
-            ${ingredient.map(ing => `<li>${ing}</li>`).join('')}
-          </ul>
+        
+            ${ingredient.map(item => `<li>${item}</li>`).join('')}
+        
         `
         
         ul.innerHTML = li;
@@ -91,9 +96,4 @@ const displayDetails = mealItemDetails => {
 
     });
 
-}
-
-const dataErase = mealItemName => {
-    const mealItemsInformation = document.getElementById(mealItemName);
-    mealItemsInformation.innerHTML = "";
 }
