@@ -27,7 +27,14 @@ function getInputValue(inputId){
     const inputField = document.getElementById(inputId);
     const inputFieldValue = inputField.value;
     inputField.value = ''
-    return inputFieldValue
+
+    if(isNaN(inputFieldValue) || inputFieldValue < 0 || inputFieldValue === ''){
+        alert("Enter Valid Number")
+        return 0
+    }
+
+    return parseInt(inputFieldValue)
+
 };
 
 function getValueOfElement(elementId, value){
