@@ -69,23 +69,20 @@ const displayDetails = mealItemDetails => {
         const imgUrl = document.createElement('img');
         imgUrl.src = items.strMealThumb;
         mealItemsInformations.appendChild(imgUrl);
+        
+        let ingredient = [];
+        for (let i = 1; i <= 20; i++) {
+          if (items[`strIngredient${i}`]) {
+            ingredient.push(items[`strIngredient${i}`]);
+          }
+        }
+        
         const li = `
-        
-         <li>${items.strIngredient1}</li>
-         <li>${items.strIngredient2}</li>
-         <li>${items.strIngredient3}</li>
-         <li>${items.strIngredient4}</li>
-         <li>${items.strIngredient5}</li>
-         <li>${items.strIngredient6}</li>
-         <li>${items.strIngredient7}</li>
-         <li>${items.strIngredient8}</li>
-         <li>${items.strIngredient9}</li>
-         <li>${items.strIngredient10}</li>
-         <li>${items.strIngredient11}</li>
-         <li>${items.strIngredient12}</li>
-         <li>${items.strIngredient13}</li>
-        
+          <ul>
+            ${ingredient.map(ing => `<li>${ing}</li>`).join('')}
+          </ul>
         `
+        
         ul.innerHTML = li;
         mealItemsInformations.appendChild(itemsName);
         mealItemsInformations.appendChild(ingredients);
@@ -96,4 +93,7 @@ const displayDetails = mealItemDetails => {
 
 }
 
-
+const dataErase = mealItemName => {
+    const mealItemsInformation = document.getElementById(mealItemName);
+    mealItemsInformation.innerHTML = "";
+}
