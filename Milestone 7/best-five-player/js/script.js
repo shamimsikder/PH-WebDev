@@ -17,7 +17,6 @@ for(const button of buttons){
             addPlayer(button.parentNode.children[0].innerText);
         } else{
             button.classList.remove('disabled');
-            addPlayer(button.parentNode.children[0].innerText)
             alert('5 Played already Selected');
         }
     })
