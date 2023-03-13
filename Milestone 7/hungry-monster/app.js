@@ -5,10 +5,11 @@ const searchFood = () => {
     const searchData = searchField.value
     
     if(searchData === ""){
-        alert("Enter Something")
+        document.getElementById('errorMessage').innerHTML = 'Enter Something'
     }
 
     else{
+        document.getElementById('errorMessage').textContent = ''
         const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchData}`;
         fetch(url)
         .then(res => res.json())
