@@ -3,18 +3,24 @@
 const searchFood = () => {
     const searchField = document.getElementById('mealInput'); 
     const searchData = searchField.value
+    searchField.value = ''
     
     if(searchData === ""){
         document.getElementById('errorMessage').innerHTML = 'Enter Something'
+        return
     }
+    
+   // document.getElementById('errorMessage').textContent = ''
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchData}`;
+    fetch(url)
+    .then(res => res.json())
+    .then(data => displayMealInfo(data.meals))
+    .catch(error =>{
+        document.getElementById('errorMessage').innerHTML = "There is no food in this name";
+    })
 
-    else{
-        document.getElementById('errorMessage').textContent = ''
-        const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchData}`;
-        fetch(url)
-        .then(res => res.json())
-        .then(data => displayMealInfo(data.meals))
-    }
+    searchField.value = "";
+    document.getElementById('errorMessage').textContent = ''
     
 }
 
