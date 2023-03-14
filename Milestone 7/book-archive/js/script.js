@@ -5,10 +5,17 @@ const searchBook = () => {
   const searchText = searchField.value;
 
   // ----------load data----------
+ 
+  if(searchText === ''){
+    document.getElementById('text').innerHTML = `<small>search field can not be empty</small>`
+    return
+  }
+
   const url = `https://openlibrary.org/search.json?q=${searchText}`;
-    fetch(url)
-    .then(res => res.json())
-    .then(data => displaySearchResult(data));
+  fetch(url)
+  .then(res => res.json())
+  .then(data => displaySearchResult(data));
+
 };
 
 // ----------display search result data----------
