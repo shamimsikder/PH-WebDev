@@ -37,7 +37,7 @@ document
     if (review_scores.scores) {
       reviews.setAttribute('class',"list-group")
 
-      object.keys(review_scores.scores).forEach((key) => {
+      Object.keys(review_scores.scores).forEach((key) => {
         reviews.innerHTML += `
         <li class="list-group-item list-group-item-info d-flex justify-content-between align-items-center">
         ${key} : 
