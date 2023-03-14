@@ -16,10 +16,12 @@ const displaySearchResult = (myBooks) => {
   const searchResult = document.getElementById("search-data");
   searchResult.innerText = "";
  
+  document.getElementById('text').innerHTML = `Total books found ${myBooks.numFound}`
+  
   const books = myBooks.docs;
+   
   books.forEach((book) => {
     
-    console.log(book.author_name)
     const div = document.createElement("div");
     div.classList.add("col");
     div.innerHTML = `
