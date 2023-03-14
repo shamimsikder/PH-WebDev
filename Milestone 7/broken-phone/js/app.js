@@ -28,13 +28,10 @@ const displayPhones = (phones, dataLimit) =>{
         noPhone.classList.add('d-none');
     }
 
-    console.log(phones)
     // display all phones
     phones.forEach(phone =>{
         const phoneDiv  = document.createElement('div');
         phoneDiv.classList.add('col');
-
-        console.log(phone)
 
         phoneDiv.innerHTML = `
         <div class="card p-4">
@@ -89,7 +86,7 @@ document.getElementById('btn-show-all').addEventListener('click', function(){
     processSearch();
 })
 
-const loadPhoneDetails = async id =>{
+const loadPhoneDetails = async(id) =>{
     const url =` https://openapi.programming-hero.com/api/phone/${id}`;
     const res = await fetch(url);
     const data = await res.json();
@@ -97,17 +94,19 @@ const loadPhoneDetails = async id =>{
 }
 
 const displayPhoneDetails = phone =>{
-    console.log(phone);
-    const modalTitle = document.getElementById('phoneDetailModalLabel');
+    console.log(phone.name);
+    const modalTitle = document.getElementsByClassName('modal-title');
     modalTitle.innerText = phone.name;
     const phoneDetails = document.getElementById('phone-details');
-    console.log(phone.mainFeatures.sensors[0]);
+    
+   // console.log(phone.mainFeatures.sensors[0]);
     phoneDetails.innerHTML = `
         <p>Release Date: ${phone.releaseDate}</p>
-        <p>Storage: ${phone.mainFeatures}</p>
+        <p>Storage: ${phone.mainFeatures.storage}</p>
         <p>Others: ${phone.others ? phone.others.Bluetooth : 'No Bluetooth Information'}</p>
-        <p>Sensor: ${phone.mainFeatures.sensors ? phone.mainFeatures.sensors[0] : 'no sensor'}</p>
+        <p>Sensor: ${phone.mainFeatures.sensors ? phone.mainFeatures.sensors[0] : phone.mainFeatures.sensors[1]}</p>
     `
+    
 }
 
 //loadPhones('apple');
