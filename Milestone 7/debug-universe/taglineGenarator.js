@@ -15,11 +15,11 @@ function generateTag(arr, interval) {
   setInterval(() => {
     const randomIndex = Math.floor(Math.random() * arr.length);
     const randomTagLine = tagLines[randomIndex];
-    document.getElementById("taglines").innerText = randomTagLine;
+    document.getElementById("tagline").innerText = randomTagLine;
   }, interval);
 }
 
-generateTag(tagLines, 2000);
+generateTag(tagLines, 3000);
 
 document
   .getElementById("random-room-btn")
@@ -29,7 +29,7 @@ document
     const result = await data.json();
     const randomIndex = Math.floor(Math.random() * 10);
     const modalBody = document.getElementById("random-room-info-modal-body");
-    const { name, summary, property_type, images, review_scores } = result[9];
+    const { name, summary, property_type, images, review_scores } = result[randomIndex];
     
     
 
