@@ -49,7 +49,7 @@ document
       reviews.innerHTML = "No reviews found";
     }
 
-    
+console.log(review_scores.scores)    
     modalBody.innerHTML = `
     <div class="col">
     <div class="card h-100">
@@ -61,7 +61,7 @@ document
         <p class="card-text">${summary}</p>
         <div id='review-score'>
       Review Scores :
-      ${review_scores.scores.review_scores_accuracy}
+      <div id="reviews"></div>
     </div>
       </div>
       <button class="btn btn-info btn-lg"  role="button"
@@ -69,6 +69,8 @@ document
     </div>
    </div>
     `;
+
+    document.getElementById('reviews').appendChild(reviews)
     
   });
 
