@@ -49,7 +49,6 @@ document
       reviews.innerHTML = "No reviews found";
     }
 
-console.log(review_scores.scores)    
     modalBody.innerHTML = `
     <div class="col">
     <div class="card h-100">
