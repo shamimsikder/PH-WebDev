@@ -23,7 +23,7 @@ const addData = (input) => {
 
     data.push(input.value)
 
-    localStorage.setItem("data", data)
+    localStorage.setItem("data", JSON.stringify(data))
 
     list.innerHTML += `
     
@@ -34,3 +34,25 @@ const addData = (input) => {
     input.value = ''
 
 }
+
+const oldData = () => {
+
+    const get = localStorage.getItem('data')
+
+    if(get){
+
+        const oldData = JSON.parse(get)
+
+        for(const item of oldData){
+
+            data.push(item)
+
+            document.getElementById('list').innerHTML += `<li>${item}</input>`
+
+        }
+
+    }
+
+}
+
+oldData()
