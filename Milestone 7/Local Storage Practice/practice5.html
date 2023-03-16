@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>LocalStorage</title>
+
+    <!--Tailwind CSS CDN-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="w-full max-w-6xl mx-auto">
+    
+    <div class="mt-20 text-center">
+
+        <input id="product" type="text" class="px-4 py-2 rounded-md outline-none border-2 border-teal-500" placeholder="Product">
+        <input id="quantity" type="text" class="px-4 py-2 rounded-md outline-none border-2 border-teal-500" placeholder="Quantity">
+        <button id="add" class="px-4 py-2 rounded-md bg-teal-500" onclick="addProduct()">Add Item</button>
+
+        <div id="display">
+
+            <ol id="list" class="list-decimal list-inside mt-10">
+
+            </ol>
+
+        </div>
+
+    </div>
+
+    <!--JS-->
+    <script src="practice5.js"></script>
+
+</body>
+
+</html>
