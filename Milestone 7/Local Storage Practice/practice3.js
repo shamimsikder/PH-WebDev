@@ -36,7 +36,6 @@ const saveToLocalStorage = (product, quantity) => {
 const showOldData = () => {
 
     const items = getFromLocalStorage()
-
     
     for( const item in items) {
       
