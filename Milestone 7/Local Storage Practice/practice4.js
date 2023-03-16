@@ -33,3 +33,14 @@ const addItemToLocalStorage = (product, quantity) => {
 
 }
 
+const showOldData = () => {
+
+    const items = getItemFromLocalStorage()
+
+    for(const item in items){
+        document.getElementById('list').innerHTML += `<li>${item}: ${items[item]}`
+    }
+
+}
+
+showOldData()
