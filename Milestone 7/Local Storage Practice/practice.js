@@ -1,10 +1,10 @@
 let items = []
-const input = document.getElementById('input')
+const list = document.getElementById('list');
 
 document.getElementById('btn').addEventListener('click', function(){
 
-    addList()
-   
+    const input = document.getElementById('input')
+    addList(input)
 
 })
 
@@ -12,27 +12,22 @@ document.getElementById('input').addEventListener('keypress', function(e){
 
    if(e.key === 'Enter'){
 
-        addList()
+        const input = document.getElementById('input')
+        addList(input)
         
-
    }
 
 })
 
-const addList = () => {
-
-    const input = document.getElementById('input')
-
-    const list = document.getElementById('list')
+const addList = (input) => {
 
     items.push(input.value)
     
-    //console.log(items)
-    localStorage.setItem("items", items)
+    localStorage.setItem("items", JSON.stringify(items))
 
     list.innerHTML += `
     
-        <li>${input.value}</li>
+    <li>${input.value}</li>
     
     `
 
@@ -40,4 +35,22 @@ const addList = () => {
 
 }
 
+const showOldData = () => {
 
+    const get = localStorage.getItem('items');
+
+    if (get) {
+
+        const oldItems = JSON.parse(get);
+
+        for (const item of oldItems) {
+
+            items.push(item);
+
+            list.innerHTML += `<li>${item}</li>`;
+        
+        }
+    }
+};
+
+showOldData();
