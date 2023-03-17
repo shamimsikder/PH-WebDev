@@ -23,12 +23,12 @@ const showData = (data) => {
     document.getElementById('name').innerText = name
     document.getElementById('userName').innerText = login
     document.getElementById('date').innerText = `${day} ${month} ${year}`
-    document.getElementById('bio').innerText = bio
+    document.getElementById('bio').innerText = bio ? bio : "This Profile Has No Bio"
     document.getElementById('repo').innerText = public_repos
     document.getElementById('follower').innerText = followers
     document.getElementById('following').innerText = following
     document.getElementById('location').innerText = location ? location : "No Data"
-    document.getElementById('your-link').innerText = blog
+    document.getElementById('your-link').innerText = blog ? blog : "No Data"
     document.getElementById('twitter').innerText = twitter_username ? twitter_username : "No Data"
     document.getElementById('company').innerText = company ? company : "No Data"
 
