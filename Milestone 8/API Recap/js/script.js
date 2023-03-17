@@ -43,4 +43,14 @@ document.getElementById('btn').addEventListener('click', function(){
 
 })
 
+document.getElementById('input').addEventListener('keypress', function(e){
+
+    const userName = document.getElementById('input').value
+
+    if(e.key === 'Enter'){
+        loadData(userName)
+    }
+
+})
+
 loadData('programminghero1')
