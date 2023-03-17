@@ -1,6 +1,6 @@
-const loadData = async() => {
+const loadData = async(userName) => {
 
-    const URL = "https://api.github.com/users/programminghero1"
+    const URL = `https://api.github.com/users/${userName}`
 
     const res = await fetch(URL)
     const data = await res.json()
@@ -18,9 +18,6 @@ const showData = (data) => {
     const month = new Intl.DateTimeFormat('en', { month: 'long' }).format(date);
     const day = date.getDate();
 
-   // const formattedDate = `${day} ${month} ${year}`;
-
-
     document.getElementById('name').innerText = name
     document.getElementById('userName').innerText = login
     document.getElementById('date').innerText = `${day} ${month} ${year}`
@@ -36,4 +33,12 @@ const showData = (data) => {
 
 }
 
-loadData()
+document.getElementById('btn').addEventListener('click', function(){
+
+    const userName = document.getElementById('input').value
+
+    loadData(userName)
+
+})
+
+loadData('programminghero1')
