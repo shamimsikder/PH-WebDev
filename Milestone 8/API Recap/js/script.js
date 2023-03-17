@@ -18,6 +18,8 @@ const showData = (data) => {
     const month = new Intl.DateTimeFormat('en', { month: 'long' }).format(date);
     const day = date.getDate();
 
+    document.getElementById('img').innerHTML = `<img class="h-20 w-20 rounded-full" src="${avatar_url}" alt="">` 
+    
     document.getElementById('name').innerText = name
     document.getElementById('userName').innerText = login
     document.getElementById('date').innerText = `${day} ${month} ${year}`
