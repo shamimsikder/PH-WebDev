@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -21,13 +21,58 @@ function App() {
         product.map(item =>  <Product name={item.name} price={item.price}></Product>)
     */}
 
-    <Counter></Counter>
+    {/*<Counter></Counter>*/}
+
+    <ExternalUsers></ExternalUsers>
 
     </div>
   )
 }
 
-function Counter(){
+function ExternalUsers(){
+
+  const [users, setUsers] = useState([])
+
+  useEffect(() => {
+
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(res => res.json())
+      .then(data => setUsers(data))
+
+  },[])
+
+  return(
+
+   <div>
+
+    <h3>External Users</h3>
+
+    {
+      users.map(user => <User name={user.name} website={user.website}></User>)
+    }
+
+   </div>
+
+  )
+
+}
+
+function User(props){
+
+  return(
+
+    <div className='users'>
+
+      <h3>Name: {props.name}</h3>
+      <p>Website: {props.website}</p>
+
+    </div>
+
+  )
+
+}
+
+/*function Counter(){
 
   const [count, setCount] = useState(0)
 
@@ -44,7 +89,7 @@ function Counter(){
 
   )
 
-}
+}*/
 
 /*function Product(props){
 
