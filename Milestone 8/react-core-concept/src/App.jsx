@@ -4,23 +4,42 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+ 
   return (
     <div className="App">
       
       <Person></Person>
       <Person></Person>
+      <Person></Person>
+
+      <Friend></Friend>
+      <Friend></Friend>
       
     </div>
   )
 }
 
+function Friend(){
+
+  return(
+
+    <div className='friend'>
+      <h1>Shakib Al Hasan</h1>
+      <p>Job: Cricketer</p>
+    </div>
+
+  )
+
+}
+
 function Person(){
 
-  return (
+  return(
 
-    <h1>WelCome to React</h1>
+    <div className='person'>
+      <h1>Vinicius jr</h1>
+      <p>Profession: Football</p>
+    </div>
 
   )
 
