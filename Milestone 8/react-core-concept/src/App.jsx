@@ -8,37 +8,37 @@ function App() {
   return (
     <div className="App">
       
-      <Person></Person>
-      <Person></Person>
-      <Person></Person>
+      <Person name='Vinicius jr' job='Football'></Person>
+      <Person name='Ricardo Kaká' job='Football'></Person>
+      <Person name='Federico Valverde' job='Football'></Person>
 
-      <Friend></Friend>
-      <Friend></Friend>
+      <Friend name='Shakib Al Hasan' job='Cricketer'></Friend>
+      <Friend name='Kane Williamson' job='Cricketer'></Friend>
       
     </div>
   )
 }
 
-function Friend(){
+function Friend(props){
 
   return(
 
     <div className='friend'>
-      <h1>Shakib Al Hasan</h1>
-      <p>Job: Cricketer</p>
+      <h1>{props.name}</h1>
+      <p>Job: {props.job}</p>
     </div>
 
   )
 
 }
 
-function Person(){
+function Person(props){
 
   return(
 
     <div className='person'>
-      <h1>Vinicius jr</h1>
-      <p>Profession: Football</p>
+      <h1>{props.name}</h1>
+      <p>Profession: {props.job}</p>
     </div>
 
   )
