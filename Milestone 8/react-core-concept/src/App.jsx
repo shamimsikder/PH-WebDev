@@ -9,9 +9,21 @@ function App() {
   return (
     <div className="App">
       
+      <Person></Person>
+      <Person></Person>
       
     </div>
   )
+}
+
+function Person(){
+
+  return (
+
+    <h1>WelCome to React</h1>
+
+  )
+
 }
 
 export default App
