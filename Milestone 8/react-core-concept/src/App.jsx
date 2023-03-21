@@ -5,14 +5,26 @@ import './App.css'
 
 function App() {
  
-  const footballer = ['Vinicius jr','Ricardo Kaká','Federico Valverde']
-  const cricketer = ['Shakib Al Hasan','Kane Williamson']
+  const footballer = [
+    {name:'Vinicius jr', job:'Footballer'},
+    {name:'Ricardo Kaká', job:'Footballer'},
+    {name:'Federico Valverde', job:'Footballer'}
+    
+  ]
+  const cricketer = [
+    {name:'Shakib Al Hasan', job:'Footballer'},
+    {name:'Kane Williamson', job:'Footballer'},
+  ]
 
   return (
     <div className="App">
 
       {
-        footballer.map(football => <Person name={football}></Person>)
+        footballer.map(football => <Person name={football.name} job={football.job}></Person>)
+      }
+
+      {
+        cricketer.map(cricket => <Friend name={cricket.name} job={cricket.job}></Friend>)
       }
       
       {/*<Person name= {footballer[0]} job='Football'></Person>
@@ -45,7 +57,7 @@ function Person(props){
 
     <div className='person'>
       <h1>{props.name}</h1>
-      
+      <p>Profession: {props.job}</p>
     </div>
 
   )
