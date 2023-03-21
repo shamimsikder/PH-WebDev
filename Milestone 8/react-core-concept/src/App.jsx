@@ -5,15 +5,18 @@ import './App.css'
 
 function App() {
  
+  const footballer = ['Vinicius jr','Ricardo Kaká','Federico Valverde']
+  const cricketer = ['Shakib Al Hasan','Kane Williamson']
+
   return (
     <div className="App">
       
-      <Person name='Vinicius jr' job='Football'></Person>
-      <Person name='Ricardo Kaká' job='Football'></Person>
-      <Person name='Federico Valverde' job='Football'></Person>
+      <Person name= {footballer[0]} job='Football'></Person>
+      <Person name= {footballer[1]} job='Football'></Person>
+      <Person name= {footballer[2]} job='Football'></Person>
 
-      <Friend name='Shakib Al Hasan' job='Cricketer'></Friend>
-      <Friend name='Kane Williamson' job='Cricketer'></Friend>
+      <Friend name= {cricketer[0]} job='Cricketer'></Friend>
+      <Friend name= {cricketer[1]} job='Cricketer'></Friend>
       
     </div>
   )
