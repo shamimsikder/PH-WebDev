@@ -5,27 +5,48 @@ import './App.css'
 
 function App() {
 
-  const product = [
+  /*const product = [
 
     {name: "Laptop", price: 200000},
     {name: "Phone", price: 120000},
     {name: "Watch", price: 20000},
     {name: "Tab", price: 70000},
 
-  ]
+  ]*/
 
   return (
     <div className="App">
 
-      {
+      {/*
         product.map(item =>  <Product name={item.name} price={item.price}></Product>)
-      }
+    */}
+
+    <Counter></Counter>
 
     </div>
   )
 }
 
-function Product(props){
+function Counter(){
+
+  const [count, setCount] = useState(0)
+
+  const increaseCount = () => setCount(count + 1)
+  const decreaseCount = () => setCount(count - 1)
+
+  return(
+
+    <div>
+      <h3>Count: {count}</h3>
+      <button onClick={decreaseCount}>Decrease</button>
+      <button onClick={increaseCount}>Increase</button>
+    </div>
+
+  )
+
+}
+
+/*function Product(props){
 
   return(
 
@@ -36,6 +57,6 @@ function Product(props){
 
   )
 
-}
+}*/
 
 export default App
