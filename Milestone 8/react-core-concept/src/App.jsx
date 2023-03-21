@@ -10,13 +10,17 @@ function App() {
 
   return (
     <div className="App">
+
+      {
+        footballer.map(football => <Person name={football}></Person>)
+      }
       
-      <Person name= {footballer[0]} job='Football'></Person>
+      {/*<Person name= {footballer[0]} job='Football'></Person>
       <Person name= {footballer[1]} job='Football'></Person>
       <Person name= {footballer[2]} job='Football'></Person>
 
       <Friend name= {cricketer[0]} job='Cricketer'></Friend>
-      <Friend name= {cricketer[1]} job='Cricketer'></Friend>
+      <Friend name= {cricketer[1]} job='Cricketer'></Friend>*/}
       
     </div>
   )
@@ -41,7 +45,7 @@ function Person(props){
 
     <div className='person'>
       <h1>{props.name}</h1>
-      <p>Profession: {props.job}</p>
+      
     </div>
 
   )
