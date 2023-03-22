@@ -5,27 +5,45 @@ import './App.css'
 
 function App() {
 
-  const person = [
+  /*const person = [
 
     {name: 'Ricardo Kaka', job: 'Footballer'},
     {name: 'Tamim Iqbal', job: 'Cricketer'},
     {name: 'Rafael Nadal', job: 'Tennis Player'}
 
-  ]
+  ]*/
 
   return (
 
     <div className="App">
       
-      {
+      {/*
         person.map(p => <People name={p.name} job={p.job}></People>)
-      }
+      */}
+
+      <Counter></Counter>
 
     </div>
   )
 }
 
-function People(props){
+function Counter(){
+
+  const [count, setCount] = useState(0)
+  const increaseCount = () => setCount(count + 1)
+  const decreaseCount = () => setCount(count - 1)
+  
+  return(
+    <div>
+      <h3>Count: {count}</h3>
+      <button onClick={decreaseCount}>Decrease</button>
+      <button onClick={increaseCount}>Increase</button>
+    </div>
+  )
+
+}
+
+/*function People(props){
 
   return(
 
@@ -36,6 +54,6 @@ function People(props){
 
   )
 
-}
+}*/
 
 export default App
