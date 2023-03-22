@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -21,13 +21,50 @@ function App() {
         person.map(p => <People name={p.name} job={p.job}></People>)
       */}
 
-      <Counter></Counter>
+      {/*<Counter></Counter>*/}
+
+      <ExternalUsers></ExternalUsers>
 
     </div>
   )
 }
 
-function Counter(){
+function ExternalUsers (){
+
+  const [user, setUser] = useState([])
+
+  useEffect (() => {
+
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(res => res.json())
+      .then(data => setUser(data))
+
+  }, [])
+
+  return(
+
+    <div>
+      {user.map(u => <User name={u.name} email={u.email}></User>)}
+    </div>
+
+  )
+
+}
+
+function User(props){
+
+  return(
+
+    <div className='user'>
+      <h2>Name: {props.name}</h2>
+      <h4>E-mail: {props.email}</h4>
+    </div>
+
+  )
+
+}
+
+/*function Counter(){
 
   const [count, setCount] = useState(0)
   const increaseCount = () => setCount(count + 1)
@@ -41,7 +78,7 @@ function Counter(){
     </div>
   )
 
-}
+}*/
 
 /*function People(props){
 
