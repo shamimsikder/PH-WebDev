@@ -23,15 +23,53 @@ function App() {
 
       {/*<Counter></Counter>*/}
 
-      <ExternalUsers></ExternalUsers>
+      {/*<ExternalUsers></ExternalUsers>*/}
+
+      <ExternalToDo></ExternalToDo>
 
     </div>
   )
 }
 
-function ExternalUsers (){
+function ExternalToDo(){
 
-  const [user, setUser] = useState([])
+  const [todo, setTodo] = useState([])
+
+  useEffect(() => {
+
+    fetch('https://jsonplaceholder.typicode.com/todos')
+      .then(res => res.json())
+      .then(data => setTodo(data))
+
+  }, [])
+
+  return(
+
+    <div>
+
+      {todo.map(item => <ToDo title={item.title} complete={item.completed}></ToDo>)}
+
+    </div>
+
+  )
+
+}
+
+function ToDo(props){
+
+  return(
+
+    <div className='user'>
+      <h3>Title: {props.title}</h3>
+      <p>Complete: {props.complete  === true ? "True" : "False"}</p> 
+    </div>
+
+  )
+
+}
+
+
+/*function ExternalUsers ()completeonst [user, setUser] = useState([])
 
   useEffect (() => {
 
@@ -49,9 +87,9 @@ function ExternalUsers (){
 
   )
 
-}
+}*/
 
-function User(props){
+/*function User(props){
 
   return(
 
@@ -62,7 +100,7 @@ function User(props){
 
   )
 
-}
+}*/
 
 /*function Counter(){
 
