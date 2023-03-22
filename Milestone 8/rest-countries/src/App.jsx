@@ -28,7 +28,26 @@ function Countries(){
   return(
 
     <div>
+      
       <h2>Total Countries: {countries.length}</h2>
+
+      {countries.map(country => <Country name={country.name.common} population={country.population}></Country>)}
+
+    </div>
+
+  )
+
+}
+
+function Country(props){
+
+  return(
+
+    <div className='country'>
+
+      <h2>Name: {props.name}</h2>
+      <h4>Population: {props.population}</h4>
+
     </div>
 
   )
