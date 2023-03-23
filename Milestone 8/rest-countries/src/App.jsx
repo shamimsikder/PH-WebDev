@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import Country from './components/Country/Country'
 
 function App() {
 
@@ -7,51 +8,51 @@ function App() {
 
     <div className="App">
       
-      <Countries></Countries>
+      <Country></Country>
 
     </div>
   )
 }
 
-function Countries(){
+// function Countries(){
 
-  const [countries, setCountries] = useState([])
+//   const [countries, setCountries] = useState([])
 
-  useEffect(() => {
+//   useEffect(() => {
 
-    fetch('https://restcountries.com/v3.1/all')
-      .then(res => res.json())
-      .then(data => setCountries(data))
+//     fetch('https://restcountries.com/v3.1/all')
+//       .then(res => res.json())
+//       .then(data => setCountries(data))
 
-  }, [])
+//   }, [])
 
-  return(
+//   return(
 
-    <div>
+//     <div>
       
-      <h2>Total Countries: {countries.length}</h2>
+//       <h2>Total Countries: {countries.length}</h2>
 
-      {countries.map(country => <Country name={country.name.common} population={country.population}></Country>)}
+//       {countries.map(country => <Country name={country.name.common} population={country.population}></Country>)}
 
-    </div>
+//     </div>
 
-  )
+//   )
 
-}
+// }
 
-function Country(props){
+// function Country(props){
 
-  return(
+//   return(
 
-    <div className='country'>
+//     <div className='country'>
 
-      <h2>Name: {props.name}</h2>
-      <h4>Population: {props.population}</h4>
+//       <h2>Name: {props.name}</h2>
+//       <h4>Population: {props.population}</h4>
 
-    </div>
+//     </div>
 
-  )
+//   )
 
-}
+// }
 
 export default App
