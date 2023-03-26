@@ -5,13 +5,21 @@ const Product = (props) => {
     
     const {id, price, name} = props.products
     
+    const addToCart = (id) => {
+        
+    }
+
+    const RemoveFromCart = (id) => {
+
+    }
+
     return (
         <div className='product'>
             <p>Name: {name}</p>            
             <p>Price: {price}</p>            
             <p>ID: {id}</p>      
-            <button>Add to Cart</button>      
-            <button>Remove from Cart</button>      
+            <button onClick={() => addToCart(id)}>Add to Cart</button>      
+            <button onClick={() => RemoveFromCart(id)}>Remove from Cart</button>      
         </div>
     );
 };
