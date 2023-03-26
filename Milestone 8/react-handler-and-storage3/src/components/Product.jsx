@@ -1,4 +1,5 @@
 import React from 'react';
+import { addToDB, removeFromDB } from '../utilities/fakedb';
 import './Product.css'
 
 const Product = (props) => {
@@ -6,11 +7,11 @@ const Product = (props) => {
     const {id, price, name} = props.products
     
     const addToCart = (id) => {
-        
+        addToDB(id)
     }
 
     const RemoveFromCart = (id) => {
-
+        removeFromDB(id)
     }
 
     return (
