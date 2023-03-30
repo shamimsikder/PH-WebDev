@@ -11,7 +11,7 @@ const Modal = (props) => {
             <div className="modal">
                 <div className="modal-box w-11/12 max-w-5xl">
                     
-                    <div className='grid grid-cols-1 md:grid-cols-2'>
+                    <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
 
                         <div className='border-2 border-[#EB5757] rounded-lg p-5 bg-[rgba(235, 87, 87, 0.05)]'>
 
@@ -35,6 +35,8 @@ const Modal = (props) => {
 
                         <div>
                             
+                            <img className='rounded-lg' src={image_link && image_link[0]} alt="" />
+
                         </div>
 
                     </div>
