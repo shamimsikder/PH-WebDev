@@ -11,6 +11,7 @@ function App() {
       <Header></Header>
       <Button>Sort by Date</Button>
       <Card></Card>
+      <Button>See More</Button>
     </div>
   )
 }
