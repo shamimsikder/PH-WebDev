@@ -2,7 +2,7 @@ import React from 'react';
 
 const SingleData = (props) => {
     
-    const {name, image, published_in, features} = props.data
+    const {id,name, image, published_in, features} = props?.data
     
     return (
         <div className='flex flex-col justify-evenly p-4 shadow-xl rounded-lg'>
@@ -47,7 +47,7 @@ const SingleData = (props) => {
                 <div>
 
                     <label
-                    className="cursor-pointer">
+                     onClick={() => props?.setUniqueId(id)} htmlFor="my-modal-5" className="cursor-pointer">
 
                         <svg
                         xmlns="http://www.w3.org/2000/svg"
