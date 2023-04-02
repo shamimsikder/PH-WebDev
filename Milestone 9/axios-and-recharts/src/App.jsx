@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import PriceList from './components/PriceList/PriceList'
 import Dashboard from './components/Dashboard/Dashboard'
+import Axios from './components/Axios/Axios'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <Navbar></Navbar>
       <PriceList></PriceList>
       <Dashboard></Dashboard>
+      <Axios></Axios>
 
     </div>
   )
