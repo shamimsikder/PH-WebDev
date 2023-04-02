@@ -17,17 +17,17 @@ const Navbar = () => {
       
 
     return (
-        <div>
+        <div className='bg-emerald-500 text-white md:p-5'>
 
             <div onClick={() => setOpen(!open)} className='md:hidden'>
                 <span>{open === true ? 
-                <XMarkIcon className="h-6 w-6 text-blue-500" />
-                :<Bars3Icon className="h-6 w-6 text-blue-500" />}
+                <XMarkIcon className="h-6 w-6 text-white" />
+                :<Bars3Icon className="h-6 w-6 text-white" />}
                 </span>
                 
             </div>
             
-            <ul className='md:flex'>
+            <ul className={`md:flex absolute md:static duration-500 bg-emerald-500 pl-8 pb-4 md:pl-0 md:pb-0 rounded-sm ${open ? 'top-6' : '-top-36'}`}>
                 {
                     routers.map(route => <Link key={route.id} route={route}></Link>)
                 }
