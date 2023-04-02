@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
+import PriceList from './components/PriceList/PriceList'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       
       <Navbar></Navbar>
+      <PriceList></PriceList>
 
     </div>
   )

@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "name": "Basic",
+      "price": 10.99,
+      "features": [
+        "Access to basic features",
+        "Limited customer support",
+        "No analytics tracking"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Pro",
+      "price": 24.99,
+      "features": [
+        "Access to advanced features",
+        "Priority customer support",
+        "Basic analytics tracking"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Enterprise",
+      "price": 99.99,
+      "features": [
+        "Access to all features",
+        "Dedicated customer support",
+        "Advanced analytics tracking"
+      ]
+    }
+  ]
+  
