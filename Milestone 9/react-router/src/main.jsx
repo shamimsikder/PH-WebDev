@@ -16,7 +16,19 @@ const router = createBrowserRouter([
 
   {
     path: "/",
-    element: <Home></Home>
+    element: <Home></Home>,
+    children:[
+
+      {
+        path: "about",
+        element: <About></About>
+      },
+      {
+        path: "contact",
+        element: <Contact></Contact>
+      }
+
+    ]
   }
 
 ])
@@ -40,7 +52,6 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     
-    <Header></Header>
     <RouterProvider router={router} />
   
   </React.StrictMode>,
