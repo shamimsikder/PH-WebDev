@@ -12,7 +12,7 @@ const Friend = ({friend}) => {
             <h1>{name}</h1>
             <p>Phone: {phone}</p>
             <p>E-mail: {email}</p>
-
+            <p><Link to={"/posts"}>Posts</Link></p>
             <p><Link to={`/friend/${id}`}>Show Details</Link></p>
 
         </div>
