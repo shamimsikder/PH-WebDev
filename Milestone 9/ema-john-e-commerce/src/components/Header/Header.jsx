@@ -8,10 +8,12 @@ const Header = () => {
             <img src="Logo.svg" alt="" />
 
             <div className='link'>
-                <a href="">Order</a>
-                <a href="">Order Review</a>
-                <a href="">Manage Inventory</a>
-                <a href="">login</a>
+                <a href="/home">Home</a>
+                <a href="/shop">Shop</a>
+                <a href="/order">Orders</a>
+                <a href="/order-review">Order Review</a>
+                <a href="/manage-inventory">Manage Inventory</a>
+                <a href="/login">login</a>
             </div>
 
         </div>
