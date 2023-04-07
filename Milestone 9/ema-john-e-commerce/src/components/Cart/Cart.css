@@ -10,3 +10,18 @@
 .order-summary{
     text-align: center;
 }
+
+.btn-clear-cart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 56px;
+    border: none;
+    margin: 10px auto;
+    background: #FF3030;
+    border-radius: 4px;
+    color: white;
+    font-size: 21px;
+    cursor: pointer;
+}
