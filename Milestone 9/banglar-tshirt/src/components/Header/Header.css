@@ -2,4 +2,15 @@ nav a{
     margin-right: 15px;
     font-size: 20px;
     text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+nav a:hover{
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.header{
+    margin-top: 10px;
 }
