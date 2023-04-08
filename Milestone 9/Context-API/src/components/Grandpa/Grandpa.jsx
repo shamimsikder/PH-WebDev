@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import './Grandpa.css'
 import Father from '../Father/Father';
 import Uncle from '../Uncle/Uncle';
 import Aunty from '../Aunty/Aunty';
-import Myself from '../Myself/Myself';
+
+export  const RingContext = createContext("Gold")
 
 const Grandpa = () => {
 
@@ -13,11 +14,15 @@ const Grandpa = () => {
         <div className='grandpa'>
             <h2>Grandpa</h2>
 
-            <section className='flex'>
-                <Father ring={ring}></Father>
-                <Uncle></Uncle>
-                <Aunty ring={ring}></Aunty>
-            </section>
+            <RingContext.Provider value='Gold Ring'>
+
+                <section className='flex'>
+                    <Father ring={ring}></Father>
+                    <Uncle></Uncle>
+                    <Aunty ring={ring}></Aunty>
+                </section>
+
+            </RingContext.Provider>
 
         </div>
     );
