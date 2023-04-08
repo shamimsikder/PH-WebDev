@@ -1,7 +1,10 @@
 .tshirt-details{
-
+    border: 1px solid lightblue;
+    border-radius: 8px;
+    padding: 10px;
 }
 
 .tshirt-details img{
-    width: 256px;
+    height: 256px;
+    border-radius: 10px;
 }
