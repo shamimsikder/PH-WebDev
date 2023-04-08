@@ -1,13 +1,12 @@
 import React from 'react';
 import Special from '../Special/Special';
 
-const Myself = ({ring}) => {
+const Cousin = ({children}) => {
     return (
         <div>
-            <h2>Myself</h2>
-            <Special ring={ring}></Special>
+            <h2>{children}</h2>
         </div>
     );
 };
 
-export default Myself;
+export default Cousin;
