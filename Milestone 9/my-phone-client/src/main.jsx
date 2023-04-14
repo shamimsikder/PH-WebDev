@@ -7,12 +7,28 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Phones from './components/Phones';
+import Phone from './components/Phone';
 
 const router = createBrowserRouter([
 
   {
     path: '/',
-    element: <App></App>
+    element: <App></App>,
+    children: [
+
+     {
+      path: 'phones',
+      element: <Phones></Phones>,
+      loader: () => fetch('http://localhost:5000/phones')
+     },
+     {
+      path: '/phone/:id',
+      element: <Phone></Phone>,
+      loader: ({params}) => fetch(`http://localhost:5000/phones/${params.id}`)
+     }
+
+    ]
   }
 
 ])
@@ -20,7 +36,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
 
-    <RouterProvider/>
+    <RouterProvider router={router}/>
   
   </React.StrictMode>,
 )
