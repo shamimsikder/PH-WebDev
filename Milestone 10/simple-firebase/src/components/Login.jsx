@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../components/style.css'
 
 import {getAuth, GoogleAuthProvider,signInWithPopup} from 'firebase/auth'
 import app from '../firebase/firebase.init';
 
 const Login = () => {
+
+    const [user, setUser] = useState(null)
 
     const auth = getAuth(app)
     const googleProvider = new GoogleAuthProvider()
@@ -14,8 +16,10 @@ const Login = () => {
         signInWithPopup(auth, googleProvider)
             .then(result => {
 
-                const user = result.user
-                console.log(user)
+                const loggedInUser = result.user
+                console.log(loggedInUser)
+
+                setUser(loggedInUser)
 
             })
 
@@ -28,9 +32,15 @@ const Login = () => {
     }
 
     return (
-        <nav>
+        <div>
             <button onClick={handleGoogleSignIn}>Login</button>
-        </nav>
+
+            {user && <div>
+                <h1>User: {user.displayName}</h1>
+                <h3>Email: {user.email}</h3>
+            </div>}
+
+        </div>
     );
 };
 

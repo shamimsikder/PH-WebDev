@@ -1,4 +1,8 @@
 nav a{
-    margin-left: 5px;
+    margin-left: 20px;
     text-decoration: none;
+}
+
+nav{
+    margin-bottom: 20px;
 }
