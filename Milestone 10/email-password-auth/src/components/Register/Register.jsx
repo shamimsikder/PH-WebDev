@@ -8,6 +8,11 @@ const Register = () => {
 
         event.preventDefault()
 
+        const email = event.target.email.value
+        const password = event.target.password.value
+
+
+
     }
 
     const handleEmailChange = (event) => {
@@ -23,7 +28,7 @@ const Register = () => {
     }
 
     return (
-        <div>
+        <div className='container w-50 mx-auto'>
             
             <h1>This is register</h1>
 
