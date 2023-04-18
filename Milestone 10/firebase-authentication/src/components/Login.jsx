@@ -42,7 +42,7 @@ const Login = () => {
                 </form>
 
                 <Link to='/register'>
-                    <button className='btn btn-link'>New To Site?</button>
+                    <button className='btn btn-link'>New To Site? Please Register</button>
                 </Link>
 
             </div>
