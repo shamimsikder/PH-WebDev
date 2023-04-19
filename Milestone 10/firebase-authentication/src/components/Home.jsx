@@ -6,7 +6,7 @@ const Home = () => {
     const user = useContext(AuthContext)
 
     return (
-        <div>
+        <div className='flex flex-col justify-center items-center mt-20'>
             <h1>This is Home {user && <span>{user.displayName}</span>}</h1>
         </div>
     );
