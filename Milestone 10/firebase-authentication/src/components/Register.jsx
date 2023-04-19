@@ -4,7 +4,7 @@ import { AuthContext } from './Provider';
 
 const Register = () => {
 
-    const {user} = useContext(AuthContext)
+    const {user, createUser} = useContext(AuthContext)
 
     const handleRegistration = event => {
 
@@ -14,6 +14,15 @@ const Register = () => {
         const name = form.name.value
         const email = form.email.value
         const password = form.password.value
+
+        createUser(email, password)
+            .then(result => {
+                const loggedUser = result.user
+                form.reset()
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
 
     }
 
