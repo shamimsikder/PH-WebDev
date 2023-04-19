@@ -9,6 +9,7 @@ const auth = getAuth(app)
 const Provider = ({children}) => {
 
     const [user, setUser] = useState(null)
+    const [loading, setLoading] = useState(true)
 
     const createUser = (email, password) => {
 
@@ -33,6 +34,7 @@ const Provider = ({children}) => {
 
        const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser)
+            setLoading(false)
         })
 
         return () => {
@@ -46,7 +48,8 @@ const Provider = ({children}) => {
         user,
         createUser,
         signIn,
-        logOut
+        logOut,
+        loading
 
     }
     
