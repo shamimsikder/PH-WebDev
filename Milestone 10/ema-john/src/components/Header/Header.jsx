@@ -8,6 +8,14 @@ const Header = () => {
 
     const {user, logOut} = useContext(AuthContext)
 
+    const handleLogOut = () => {
+        logOut()
+            .then(result => {})
+            .catch(error => {
+                console.error(error)
+            })
+    }
+
     return (
         <nav className='header'>
             <img src={logo} alt="" />
