@@ -1,12 +1,15 @@
 import React, { useContext } from 'react';
 import './Login.css'
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from '../Provider/AuthProvider';
 
 const Login = () => {
 
     const {signIn} = useContext(AuthContext)
     const navigate = useNavigate()
+    const location = useLocation()
+
+    const from = location.state?.from?.pathname || '/'
 
     const handleLogIn = event => {
 
@@ -20,7 +23,7 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user
                 form.reset()
-                navigate('/')
+                navigate(from, {replace: true})
             })
             .catch(error => {
                 console.error(error.message)
