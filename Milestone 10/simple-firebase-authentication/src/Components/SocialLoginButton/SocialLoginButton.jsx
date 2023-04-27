@@ -31,7 +31,16 @@ const SocialLoginButton = () => {
     }
 
     const handleGithubLogin = () => {
-
+        
+        signInWithPopup(auth, githubProvider)
+            .then(result => {
+                const user = result.user
+                setUser(user)
+            })
+            .catch(error => {
+                console.error(error.message)
+            })
+            
     }
 
     return (
