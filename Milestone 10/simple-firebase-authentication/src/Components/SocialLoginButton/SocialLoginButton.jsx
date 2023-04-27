@@ -8,10 +8,25 @@ import {
     signInWithPopup,
     GithubAuthProvider,
   } from "firebase/auth";
+import app from '../../firebase/firebase.config';
 
 const SocialLoginButton = () => {
 
+    const [user, setUser] = useState({})
+    const auth = getAuth(app)
+    const googleProvider = new GoogleAuthProvider()
+    const githubProvider = new GithubAuthProvider()
+
     const handleGoogleLogin = () => {
+
+        signInWithPopup(auth, googleProvider)
+            .then(result => {
+                const user = result.user
+                setUser(user)
+            })
+            .catch(error => {
+                console.error(error.message)
+            })
 
     }
 
