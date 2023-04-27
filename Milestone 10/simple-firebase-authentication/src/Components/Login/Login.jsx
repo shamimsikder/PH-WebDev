@@ -1,4 +1,5 @@
 import React from 'react';
+import SocialLoginButton from '../SocialLoginButton/SocialLoginButton';
 
 const Login = () => {
     return (
@@ -37,6 +38,9 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+
+            <SocialLoginButton></SocialLoginButton>
+
         </div>
     );
 };
