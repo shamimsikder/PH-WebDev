@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../Providers/AuthProviders';
 
 const Login = () => {
+
+    const {user} = useContext(AuthContext)
+
     return (
         <Container className='w-25 mx-auto mt-4'>
             
