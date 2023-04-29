@@ -18,8 +18,8 @@ const NavigationBar = () => {
                     <Nav className="mx-auto">
                         
                         <Link to='/category/0'>Home</Link>
-                        <Link to='/'>About</Link>
-                        <Link to='/'>Career</Link>
+                        <Link to='/register'>Register</Link>
+                        <Link to='/login'>Login</Link>
                        
                     </Nav>
                     <Nav className='d-flex justify-content-center align-items-center'>

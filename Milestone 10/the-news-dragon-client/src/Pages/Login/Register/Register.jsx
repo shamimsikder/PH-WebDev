@@ -12,9 +12,10 @@ const Register = () => {
         event.preventDefault()
 
         const form = event.target
-        const name = event.name.value
-        const email = event.email.value
-        const password = event.password.value
+        const name = form.name.value
+        const photo = form.photo.value
+        const email = form.email.value
+        const password = form.password.value
 
         createUser(email, password)
             .then(result => {
