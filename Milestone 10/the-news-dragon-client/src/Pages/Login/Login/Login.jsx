@@ -5,14 +5,33 @@ import { AuthContext } from '../../../Providers/AuthProviders';
 
 const Login = () => {
 
-    const {user} = useContext(AuthContext)
+    const {user, login} = useContext(AuthContext)
+
+    const handleLogin = event => {
+
+        event.preventDefault()
+
+        const form = event.target
+        const email = form.email.value
+        const password = form.password.value
+
+        login(email, password)
+            .then(result => {
+                const loggedUser = result.user
+                console.log(loggedUser)
+            })
+            .catch(error => {
+                console.log(error.message)
+            })
+
+    }
 
     return (
         <Container className='w-25 mx-auto mt-4'>
             
             <h3>Please Login</h3>
             
-            <Form>
+            <Form onSubmit={handleLogin}>
                 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
