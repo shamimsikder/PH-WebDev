@@ -10,6 +10,7 @@ import LoginLayout from "../Layout/LoginLayout";
 import Login from "../Pages/Login/Login/Login";
 import Register from "../Pages/Login/Register/Register";
 import PrivateRoutes from "./PrivateRoutes";
+import Terms from "../Pages/Shared/Terms/Terms";
   
   const router = createBrowserRouter([
 
@@ -28,6 +29,10 @@ import PrivateRoutes from "./PrivateRoutes";
         {
           path: 'register',
           element: <Register></Register>
+        },
+        {
+          path: 'terms',
+          element: <Terms></Terms>
         }
 
       ]
