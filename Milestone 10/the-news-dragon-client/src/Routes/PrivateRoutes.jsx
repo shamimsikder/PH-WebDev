@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../Providers/AuthProviders';
 
-const PrivateRoutes = () => {
+const PrivateRoutes = ({children}) => {
 
     const {user} = useContext(AuthContext)
 
