@@ -4,7 +4,7 @@ const useTitle = title => {
 
     useEffect(() => {
 
-        document.title = title;
+        document.title = `${title} - News Dragon`;
 
     }, [title])
 
