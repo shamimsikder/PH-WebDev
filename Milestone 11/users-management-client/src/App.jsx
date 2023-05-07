@@ -13,17 +13,29 @@ function App() {
 
   }, [])
 
+  const handleAddUser = event => {
+
+    event.preventDefault()
+
+    const form = event.target
+    const email = form.email.value
+    const name = form.name.value 
+
+    const user = {email, name}
+
+  }
+
   return (
     <>
       
       <h1>Users Management</h1>
       <h1>Number of Users:  {users.length}</h1>
 
-      <form>
+      <form onClick={handleAddUser}>
 
-        <input type="text" name="" id="" />
+        <input type="text" name="name" id="" />
         <br />
-        <input type="email" name="" id="" />
+        <input type="email" name="email" id="" />
         <br />
         <input type="submit" value="Add User" />
 
