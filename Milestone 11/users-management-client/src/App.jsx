@@ -19,6 +19,16 @@ function App() {
       <h1>Users Management</h1>
       <h1>Number of Users:  {users.length}</h1>
 
+      <form>
+
+        <input type="text" name="" id="" />
+        <br />
+        <input type="email" name="" id="" />
+        <br />
+        <input type="submit" value="Add User" />
+
+      </form>
+
       {
         users.map(user => <p key={user.id}>{user.name} : {user.email}</p>)
       }
