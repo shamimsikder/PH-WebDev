@@ -43,6 +43,16 @@ const client = new MongoClient(uri, {
       
         });
 
+        app.get('/users/:id', async(req, res) => {
+
+          const userId = req.params.id;
+          const query = {_id: new ObjectId(userId)}
+          const user = await userCollection.findOne(query)
+          
+          res.send(user)
+
+        })
+
         app.delete('/users/:id', async(req, res) => {
 
           const id = req.params.id;
