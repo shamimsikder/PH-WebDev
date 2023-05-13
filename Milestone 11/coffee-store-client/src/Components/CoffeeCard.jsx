@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Swal from "sweetalert2";
 
-const CoffeeCard = ({coffee}) => {
+const CoffeeCard = ({coffee, coffees, setCoffees}) => {
 
     const { _id, name, quantity, supplier, taste, photo } = coffee;
 
-    const handleDelete = (id) => {
+    const handleDelete = (_id) => {
 
         Swal.fire({
             title: 'Are you sure?',
@@ -19,7 +19,7 @@ const CoffeeCard = ({coffee}) => {
           }).then((result) => {
             if (result.isConfirmed) {
               
-                fetch(`http://localhost:5000/coffee/${id}`, {
+                fetch(`http://localhost:5000/coffee/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -32,8 +32,10 @@ const CoffeeCard = ({coffee}) => {
                                 'Deleted!',
                                 'Coffee has been deleted.',
                                 'success'
-                              )
-                
+                            )
+
+                            const remaining = coffees.filter(cof => cof._id !== _id)  
+                            setCoffees(remaining)
 
                         }
 
