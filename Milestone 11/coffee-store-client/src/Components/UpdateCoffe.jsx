@@ -1,4 +1,5 @@
 import React from 'react';
+import Swal from "sweetalert2";
 import { useLoaderData } from 'react-router-dom';
 
 const UpdateCoffe = () => {
@@ -21,6 +22,28 @@ const UpdateCoffe = () => {
         const photo = form.photo.value;
 
         const updatedCoffee = { name, quantity, supplier, taste, category, details, photo }
+
+        fetch(`http://localhost:5000/coffee/${_id}`, {
+
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updatedCoffee)
+
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.modifiedCount > 0) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Coffee Updated Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                }
+            })
 
     }
 
