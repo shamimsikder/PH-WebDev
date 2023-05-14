@@ -1,11 +1,13 @@
 import React from 'react';
+import img from '../../assets/images/login/login.svg'
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
 
     const handleSignUp = event => {
 
     }
-    
+
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row">
