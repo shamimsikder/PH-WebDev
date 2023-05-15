@@ -47,7 +47,7 @@ async function run() {
 
         const id = req.params.id
         const query = {_id: new ObjectId(id)}
-        const options = {projection: {title: 1, price: 1, service_id: 1}}
+        const options = {projection: {title: 1, price: 1, service_id: 1, img: 1}}
 
         const result = await serviceCollection.findOne(query, options)
         res.send(result)
@@ -72,7 +72,17 @@ async function run() {
       const result = await bookingCollection.find(query).toArray()
       res.send(result)
 
-  })
+    })
+
+    app.delete('/bookings/:id', async(req, res) => {
+
+      const id = req.params.id
+      const query = {_id: new ObjectId(id)}
+      const result = await bookingCollection.deleteOne(query)
+
+      res.send(result)
+
+    })
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
