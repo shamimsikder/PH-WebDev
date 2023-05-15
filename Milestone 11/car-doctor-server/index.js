@@ -35,6 +35,19 @@ async function run() {
     const serviceCollection = client.db('carDoctor').collection('services')
     const bookingCollection = client.db('carDoctor').collection('bookings');
 
+    // jwt
+
+    app.post('/jwt', (req, res) => {
+
+      const user = req.body
+      const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {expiresIn: '1d'})
+
+      res.send({token})
+
+    })
+
+    // services
+
     app.get('/services', async(req, res) => {
 
         const cursor = serviceCollection.find()
@@ -118,3 +131,5 @@ run().catch(console.dir);
 app.listen(port, () => {
     console.log(`Car Doctor Server is Running on Port: ${port}`)
 })
+
+//require('crypto').randomBytes(64).toString('hex')
