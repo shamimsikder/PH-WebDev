@@ -15,7 +15,7 @@ const Bookings = () => {
             .then(res => res.json())
             .then(data => setBookings(data))
 
-    }, [])
+    }, [url])
 
     const handleDelete = id => {
 
