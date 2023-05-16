@@ -29,7 +29,7 @@ const BookService = () => {
 
         }
 
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://car-doctor-server-eight-tau.vercel.app/bookings', {
             method: 'POST', 
             headers: {
                 'content-type': 'application/json'
