@@ -14,4 +14,5 @@ Here are some of the topics covered in my learning period:
 * Node.js
 * MongoDB
 * Express.js
+* Firebase
 
